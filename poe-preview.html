@@ -1,0 +1,3863 @@
+<!DOCTYPE html><html lang="pt-br" class="scroll-smooth"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Burger | Os Melhores Hambúrgueres Artesanais</title>
+    <meta name="description" content="Hambúrgueres artesanais premium com ingredientes frescos. Delivery ultrarrápido e sabor incomparável. Peça agora!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#B8860B',
+                            secondary: '#DAA520',
+                            accent: '#FFD700',
+                            dark: '#1A1A1A',
+                            light: '#F8F6F0',
+                            red: '#8B0000',
+                            orange: '#D2691E',
+                            green: '#228B22',
+                            blue: '#4682B4',
+                            purple: '#6A5ACD',
+                            gray: {
+                                50: '#FAFAFA',
+                                100: '#F5F5F5',
+                                200: '#E5E5E5',
+                                300: '#D4D4D4',
+                                400: '#A3A3A3',
+                                500: '#737373',
+                                600: '#525252',
+                                700: '#404040',
+                                800: '#262626',
+                                900: '#171717'
+                            }
+                        }
+                    },
+                    fontFamily: {
+                        'brand': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Playfair Display', 'Georgia', 'serif'],
+                        'elegant': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    backgroundImage: {
+                        'luxury-gradient': 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+                        'gold-gradient': 'linear-gradient(135deg, #DAA520 0%, #FFD700 50%, #B8860B 100%)',
+                        'premium-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    },
+                    boxShadow: {
+                        'luxury': '0 25px 50px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.06)',
+                        'elegant': '0 20px 40px rgba(184, 134, 11, 0.1), 0 8px 16px rgba(184, 134, 11, 0.05)',
+                        'premium': '0 32px 64px rgba(102, 126, 234, 0.12), 0 8px 24px rgba(102, 126, 234, 0.08)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'fadeIn': 'fadeIn 0.8s ease-out',
+                        'slideUp': 'slideUp 0.6s ease-out',
+                        'scaleIn': 'scaleIn 0.5s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #F8F6F0 0%, #FAFAFA 50%, #F5F5F5 100%);
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(184, 134, 11, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(218, 165, 32, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 215, 0, 0.01) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.95) 0%, rgba(249, 115, 22, 0.95) 100%);
+        }
+
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=1920&h=1080&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .menu-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(99, 102, 241, 0.15), 0 0 0 1px rgba(99, 102, 241, 0.1);
+        }
+
+        .sticky-header {
+            backdrop-filter: blur(20px);
+            background: rgba(248, 250, 252, 0.95);
+            box-shadow: 0 1px 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .category-tab {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+
+        .category-tab.active {
+            border-bottom-color: #6366f1;
+            color: #6366f1;
+            font-weight: 600;
+        }
+
+        .category-tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .category-tab.active::before {
+            opacity: 1;
+        }
+
+        .quantity-controls {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            padding: 4px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .order-type-toggle {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            border-radius: 50px;
+            padding: 4px;
+            display: flex;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .cookie-banner {
+            backdrop-filter: blur(20px);
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(51, 65, 85, 0.95));
+        }
+
+        .modal {
+            backdrop-filter: blur(20px);
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        .payment-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(241, 245, 249, 0.8);
+        }
+
+        .payment-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .payment-card.selected {
+            border-color: #6366f1;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+        }
+
+        .order-progress {
+            background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+        }
+
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .ripple:active:before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .checkout-input {
+            @apply w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-all backdrop-blur-sm bg-white/80;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .elegant-shadow {
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.1), 0 4px 10px rgba(139, 92, 246, 0.08);
+        }
+
+        .elegant-border {
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            }
+            
+            .menu-card {
+                background: rgba(30, 41, 59, 0.9);
+                border: 1px solid rgba(99, 102, 241, 0.2);
+            }
+            
+            .sticky-header {
+                background: rgba(30, 41, 59, 0.95);
+            }
+            
+            .payment-card {
+                background: rgba(30, 41, 59, 0.8);
+                border: 2px solid rgba(51, 65, 85, 0.8);
+            }
+            
+            .checkout-input {
+                @apply bg-slate-800/80 border-slate-600 text-white;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(241, 245, 249, 0.5);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+        }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body class="bg-gray-50">
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 cookie-banner text-white p-4 z-50 transform translate-y-full transition-transform duration-500">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center">
+                <i class="fas fa-cookie-bite text-brand-yellow text-2xl mr-3"></i>
+                <div>
+                    <p class="font-medium">Nós usamos cookies 🍪</p>
+                    <p class="text-sm text-gray-300">Para melhorar sua experiência de navegação e personalizar ofertas.</p>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="openCookiePreferences()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm transition-colors">
+                    Gerenciar
+                </button>
+                <button onclick="rejectAllCookies()" class="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded-lg text-sm transition-colors">
+                    Recusar
+                </button>
+                <button onclick="acceptAllCookies()" class="px-6 py-2 bg-brand-red hover:bg-red-700 rounded-lg font-medium text-sm transition-colors">
+                    Aceitar Todos
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbotWidget" class="fixed bottom-20 right-4 z-40">
+        <!-- Chat Button -->
+        <button id="chatbotButton" onclick="toggleChatbot()" class="w-16 h-16 bg-brand-primary hover:bg-indigo-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-105">
+            <i id="chatbotIcon" class="fas fa-comments text-xl"></i>
+            <span id="chatbotNotification" class="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center hidden animate-pulse">!</span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chatbotWindow" class="absolute bottom-20 right-0 w-80 h-96 bg-white rounded-lg shadow-xl hidden flex-col overflow-hidden">
+            <!-- Chat Header -->
+            <div class="bg-brand-primary text-white p-4 flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
+                        <span class="text-brand-primary font-bold text-sm">M</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Assistente Marcos</h4>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                            <span class="text-xs">Online</span>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="closeChatbot()" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50">
+                <div class="chat-message bot-message">
+                    <div class="flex items-start space-x-2">
+                        <div class="w-6 h-6 bg-brand-primary rounded-full flex items-center justify-center">
+                            <span class="text-white text-xs font-bold">M</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm max-w-xs">
+                            <p class="text-sm">Olá! 👋 Sou o assistente da Marcos Hamburguers. Como posso ajudar você hoje?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div id="chatQuickActions" class="p-3 bg-white border-t">
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="sendQuickMessage('Quero fazer um pedido')" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-full transition-colors">
+                        🍔 Fazer Pedido
+                    </button>
+                    <button onclick="sendQuickMessage('Qual o horário de funcionamento?')" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-full transition-colors">
+                        🕒 Horários
+                    </button>
+                    <button onclick="sendQuickMessage('Onde vocês ficam?')" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-full transition-colors">
+                        📍 Localização
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="p-3 bg-white border-t">
+                <div class="flex items-center space-x-2">
+                    <input type="text" id="chatInput" placeholder="Digite sua mensagem..." class="flex-1 p-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary" onkeypress="handleChatKeyPress(event)">
+                    <button onclick="sendChatMessage()" class="bg-brand-primary hover:bg-indigo-600 text-white p-2 rounded-lg transition-colors">
+                        <i class="fas fa-paper-plane text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Order Button -->
+    <button id="floatingOrder" class="floating-cta bg-brand-primary hover:bg-indigo-600 text-white px-6 py-3 rounded-full shadow-lg font-medium elegant-shadow" onclick="openCart()">
+        <i class="fas fa-shopping-bag mr-2"></i>
+        <span id="floatingOrderText">Carrinho (<span id="floatingCartCount">0</span>)</span>
+    </button>
+
+    <!-- Header -->
+    <header id="mainHeader" class="fixed w-full top-0 z-40 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <div class="flex items-center cursor-pointer" onclick="scrollToSection('home')">
+                    <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Marcos Hamburguers</h1>
+                        <p class="text-xs text-gray-600">Est. 2010 • Ingredientes Frescos</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent font-medium transition-colors" onclick="scrollToSection('home')">Home</a>
+                    <a href="#menu" class="nav-link text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent font-medium transition-colors" onclick="scrollToSection('menu')">Menu</a>
+                    <a href="#deals" class="nav-link text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent font-medium transition-colors" onclick="scrollToSection('deals')">Ofertas</a>
+                    <a href="#locations" class="nav-link text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent font-medium transition-colors" onclick="scrollToSection('locations')">Locais</a>
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent font-medium transition-colors" onclick="scrollToSection('about')">Sobre</a>
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent font-medium transition-colors" onclick="scrollToSection('contact')">Contato</a>
+                </nav>
+
+                <!-- Action Buttons -->
+                <div class="flex items-center space-x-4">
+                    <!-- Location Selector -->
+                    <div class="hidden md:flex items-center bg-gray-100 rounded-lg px-3 py-2 cursor-pointer hover:bg-gray-200 transition-colors" onclick="selectLocation()">
+                        <i class="fas fa-map-marker-alt text-brand-red mr-2"></i>
+                        <span class="text-sm font-medium" id="selectedLocation">Centro • 15-25 min</span>
+                        <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                    </div>
+
+                    <!-- Order Type Toggle -->
+                    <div class="order-type-toggle">
+                        <button id="deliveryBtn" class="px-4 py-2 bg-brand-red text-white rounded-full text-sm font-medium" onclick="setOrderType('delivery')">
+                            Delivery
+                        </button>
+                        <button id="pickupBtn" class="px-4 py-2 text-gray-600 rounded-full text-sm font-medium hover:bg-white transition-colors" onclick="setOrderType('pickup')">
+                            Retirada
+                        </button>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <div class="hidden md:flex items-center space-x-2 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+                        <button id="lightModeBtn" onclick="setTheme('light')" class="px-3 py-1 rounded-md text-sm transition-colors" title="Modo Claro">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <button id="darkModeBtn" onclick="setTheme('dark')" class="px-3 py-1 rounded-md text-sm transition-colors" title="Modo Escuro">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button id="autoModeBtn" onclick="setTheme('auto')" class="px-3 py-1 rounded-md text-sm transition-colors" title="Automático">
+                            <i class="fas fa-magic"></i>
+                        </button>
+                    </div>
+
+                    <!-- Admin Panel Access -->
+                    <button onclick="openAdminPanel()" class="hidden md:flex items-center bg-purple-100 text-purple-700 px-3 py-2 rounded-lg hover:bg-purple-200 transition-colors" title="Painel Administrativo">
+                        <i class="fas fa-cog mr-2"></i>
+                        <span class="text-sm">Admin</span>
+                    </button>
+
+                    <!-- User Account -->
+                    <button onclick="openUserAccount()" class="hidden md:flex items-center bg-blue-100 text-blue-700 px-3 py-2 rounded-lg hover:bg-blue-200 transition-colors" title="Minha Conta">
+                        <i class="fas fa-user mr-2"></i>
+                        <span class="text-sm" id="userNameDisplay">Entrar</span>
+                    </button>
+
+                    <!-- Cart -->
+                    <button class="relative bg-brand-red hover:bg-red-700 text-white p-3 rounded-full transition-all shadow-lg hover:shadow-xl" onclick="openCart()">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span id="cartBadge" class="absolute -top-2 -right-2 bg-brand-yellow text-black text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shadow-lg">0</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuButton" class="lg:hidden text-gray-700 dark:text-gray-300 hover:text-brand-primary transition-colors" onclick="toggleMobileMenu()">
+                        <i id="mobileMenuIcon" class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white dark:bg-gray-800 z-50 transform translate-x-full transition-transform duration-300 lg:hidden">
+        <div class="p-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">Menu</h2>
+                <button onclick="toggleMobileMenu()" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="#home" class="block py-3 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent transition-colors" onclick="scrollToSection('home'); toggleMobileMenu()">Home</a>
+                <a href="#menu" class="block py-3 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent transition-colors" onclick="scrollToSection('menu'); toggleMobileMenu()">Menu</a>
+                <a href="#deals" class="block py-3 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent transition-colors" onclick="scrollToSection('deals'); toggleMobileMenu()">Ofertas</a>
+                <a href="#locations" class="block py-3 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent transition-colors" onclick="scrollToSection('locations'); toggleMobileMenu()">Locais</a>
+                <a href="#about" class="block py-3 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent transition-colors" onclick="scrollToSection('about'); toggleMobileMenu()">Sobre</a>
+                <a href="#contact" class="block py-3 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-accent transition-colors" onclick="scrollToSection('contact'); toggleMobileMenu()">Contato</a>
+            </nav>
+            
+            <div class="border-t border-gray-200 dark:border-gray-600 mt-6 pt-6">
+                <div class="space-y-3">
+                    <button onclick="openUserAccount(); toggleMobileMenu()" class="w-full flex items-center text-left py-3 text-gray-700 dark:text-gray-300 hover:text-brand-primary transition-colors">
+                        <i class="fas fa-user mr-3"></i>
+                        <span>Minha Conta</span>
+                    </button>
+                    <button onclick="openCart(); toggleMobileMenu()" class="w-full flex items-center text-left py-3 text-gray-700 dark:text-gray-300 hover:text-brand-primary transition-colors">
+                        <i class="fas fa-shopping-bag mr-3"></i>
+                        <span>Carrinho</span>
+                        <span class="ml-auto bg-brand-primary text-white px-2 py-1 rounded-full text-xs" id="mobileCartCount">0</span>
+                    </button>
+                    <button onclick="openAdminPanel(); toggleMobileMenu()" class="w-full flex items-center text-left py-3 text-gray-700 dark:text-gray-300 hover:text-brand-primary transition-colors">
+                        <i class="fas fa-cog mr-3"></i>
+                        <span>Admin</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg relative min-h-screen flex items-center">
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-5xl lg:text-7xl font-black mb-6 leading-tight">
+                        Os Melhores
+                        <span class="text-brand-yellow">Hambúrgueres</span>
+                        da Cidade
+                    </h2>
+                    <p class="text-xl lg:text-2xl mb-8 text-gray-100 leading-relaxed">
+                        Ingredientes frescos, carne premium e sabores únicos que vão conquistar seu paladar.
+                    </p>
+                    
+                    <!-- Main CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button onclick="scrollToSection('menu')" class="ripple bg-brand-accent hover:bg-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-xl">
+                            <i class="fas fa-utensils mr-3"></i>
+                            Ver Menu
+                        </button>
+                        <button onclick="quickOrder()" class="ripple bg-white/90 hover:bg-white text-brand-navy px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-xl backdrop-blur-sm">
+                            <i class="fas fa-motorcycle mr-3"></i>
+                            Pedir Delivery
+                        </button>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex items-center space-x-6 text-sm">
+                        <div class="flex items-center">
+                            <div class="flex text-brand-yellow mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9/5 (2.5k reviews)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-brand-yellow mr-2"></i>
+                            <span>Entrega em 15-25 min</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-brand-green mr-2"></i>
+                            <span>Ingredientes Frescos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual -->
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&amp;h=500&amp;fit=crop&amp;q=80" alt="Hambúrguer Delicioso" class="w-full max-w-md mx-auto rounded-3xl shadow-2xl">
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 -left-6 bg-white p-4 rounded-2xl shadow-lg animate-bounce" style="animation-duration: 3s;">
+                        <div class="flex items-center">
+                            <i class="fas fa-fire text-brand-red text-2xl mr-3"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Super Popular</p>
+                                <p class="text-sm text-gray-600" id="ordersToday">+500 pedidos hoje</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-10 -right-6 bg-white p-4 rounded-2xl shadow-lg animate-bounce" style="animation-delay: 1s; animation-duration: 3s;">
+                        <div class="flex items-center">
+                            <i class="fas fa-leaf text-brand-green text-2xl mr-3"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">100% Natural</p>
+                                <p class="text-sm text-gray-600">Sem conservantes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="bg-gradient-to-r from-brand-green to-teal-600 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center space-x-4 text-center">
+                <i class="fas fa-fire text-brand-yellow text-2xl animate-pulse"></i>
+                <p class="font-bold text-lg">🔥 OFERTA ESPECIAL: 2 Hambúrgueres por R$ 35,90 - Válido até Domingo!</p>
+                <button onclick="applyPromoOffer()" class="bg-white text-brand-green px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors">
+                    Aproveitar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-800 mb-4">
+                    Nosso <span class="text-brand-red">Menu</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Hambúrgueres artesanais feitos com ingredientes premium e muito amor em cada detalhe.
+                </p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex justify-center mb-12">
+                <div class="bg-gray-100 rounded-full p-2 inline-flex flex-wrap">
+                    <button class="category-tab active px-6 py-3 rounded-full font-medium transition-all" onclick="filterMenu('hamburguer')">
+                        Hambúrgueres
+                    </button>
+                    <button class="category-tab px-6 py-3 rounded-full font-medium transition-all" onclick="filterMenu('salgado')">
+                        Salgados
+                    </button>
+                    <button class="category-tab px-6 py-3 rounded-full font-medium transition-all" onclick="filterMenu('acompanhamento')">
+                        Acompanhamentos
+                    </button>
+                    <button class="category-tab px-6 py-3 rounded-full font-medium transition-all" onclick="filterMenu('bebida')">
+                        Bebidas
+                    </button>
+                    <button class="category-tab px-6 py-3 rounded-full font-medium transition-all" onclick="filterMenu('sobremesa')">
+                        Sobremesas
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menuGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu items will be inserted here -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="loadMoreBtn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-8 py-3 rounded-full font-medium transition-colors" onclick="loadMoreProducts()">
+                    Ver Mais Produtos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Deals Section -->
+    <section id="deals" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-800 mb-4">
+                    Ofertas <span class="text-brand-red">Especiais</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Promoções imperdíveis por tempo limitado
+                </p>
+            </div>
+
+            <div id="dealsContainer" class="grid lg:grid-cols-2 gap-8">
+                <!-- Deals will be inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-800 mb-4">
+                    Nossas <span class="text-brand-red">Localizações</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Encontre a unidade mais próxima de você
+                </p>
+            </div>
+
+            <div id="locationsContainer" class="grid lg:grid-cols-3 gap-8">
+                <!-- Locations will be inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-800 mb-4">
+                    Por Que Escolher a <span class="text-brand-red">Marcos</span>?
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Compromisso com qualidade e sabor em cada detalhe
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Ingredientes Frescos</h3>
+                    <p class="text-gray-600">Selecionamos os melhores ingredientes diariamente para garantir frescor e sabor únicos.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-brand-orange rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-fire text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Preparo Artesanal</h3>
+                    <p class="text-gray-600">Cada hambúrguer é preparado na hora, com técnicas artesanais e muito carinho.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-motorcycle text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Entrega Rápida</h3>
+                    <p class="text-gray-600">Delivery em até 25 minutos para manter o sabor e temperatura perfeitos.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-brand-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Satisfação Garantida</h3>
+                    <p class="text-gray-600">Mais de 95% de aprovação dos clientes. Sua satisfação é nossa prioridade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Marcos Hamburguers</h3>
+                            <p class="text-gray-400 text-sm">Est. 2010</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Há mais de 10 anos servindo os melhores hambúrgueres da cidade com ingredientes frescos e muito amor em cada preparo.
+                    </p>
+                    
+                    <!-- Social Media -->
+                    <div class="flex space-x-4">
+                        <a href="#" onclick="openSocialMedia('whatsapp')" class="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" onclick="openSocialMedia('telegram')" class="w-10 h-10 bg-gray-800 hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" onclick="openSocialMedia('facebook')" class="w-10 h-10 bg-gray-800 hover:bg-brand-red rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" onclick="openSocialMedia('instagram')" class="w-10 h-10 bg-gray-800 hover:bg-brand-red rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" onclick="openSocialMedia('twitter')" class="w-10 h-10 bg-gray-800 hover:bg-brand-red rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" onclick="openSocialMedia('youtube')" class="w-10 h-10 bg-gray-800 hover:bg-brand-red rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#menu" onclick="scrollToSection('menu')" class="text-gray-400 hover:text-white transition-colors">Menu</a></li>
+                        <li><a href="#deals" onclick="scrollToSection('deals')" class="text-gray-400 hover:text-white transition-colors">Ofertas</a></li>
+                        <li><a href="#locations" onclick="scrollToSection('locations')" class="text-gray-400 hover:text-white transition-colors">Localizações</a></li>
+                        <li><a href="#about" onclick="scrollToSection('about')" class="text-gray-400 hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="#" onclick="openCareersPage()" class="text-gray-400 hover:text-white transition-colors">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div>
+                    <h4 class="font-bold mb-4">Atendimento</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="openSupport()" class="text-gray-400 hover:text-white transition-colors">Fale Conosco</a></li>
+                        <li><a href="#" onclick="openFAQ()" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" onclick="trackOrder()" class="text-gray-400 hover:text-white transition-colors">Acompanhar Pedido</a></li>
+                        <li><a href="#" onclick="openPrivacyPolicy()" class="text-gray-400 hover:text-white transition-colors">Política de Privacidade</a></li>
+                        <li><a href="#" onclick="openTerms()" class="text-gray-400 hover:text-white transition-colors">Termos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold mb-4">Contato</h4>
+                    <div class="space-y-3">
+                        <p class="flex items-center text-gray-400">
+                            <i class="fas fa-phone text-brand-red w-5 mr-3"></i>
+                            <a href="tel:+5511999999999">(11) 99999-9999</a>
+                        </p>
+                        <p class="flex items-center text-gray-400">
+                            <i class="fas fa-envelope text-brand-red w-5 mr-3"></i>
+                            <a href="mailto:contato@marcoshamburguers.com">contato@marcoshamburguers.com</a>
+                        </p>
+                        <p class="flex items-start text-gray-400">
+                            <i class="fas fa-map-marker-alt text-brand-red w-5 mr-3 mt-1"></i>
+                            Rua das Flores, 123<br>Centro - São Paulo, SP
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Marcos Hamburguers. Todos os direitos reservados.
+                </p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fab fa-cc-visa text-2xl text-blue-600"></i>
+                        <i class="fab fa-cc-mastercard text-2xl text-red-600"></i>
+                        <i class="fas fa-qrcode text-2xl text-green-600"></i>
+                        <span class="text-gray-400 text-sm">PIX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 modal z-50 hidden">
+        <div class="min-h-screen px-4 text-center">
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold">Seu Carrinho</h3>
+                        <button onclick="closeCart()" class="text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <div id="cartItems" class="max-h-96 overflow-y-auto">
+                        <!-- Cart items will be inserted here -->
+                    </div>
+                    
+                    <div class="border-t pt-4 mt-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-lg font-bold">Total:</span>
+                            <span id="cartTotal" class="text-xl font-bold text-brand-red">R$ 0,00</span>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button onclick="proceedToCheckout()" class="w-full bg-brand-red hover:bg-red-700 text-white py-3 rounded-lg font-medium transition-colors">
+                                <i class="fas fa-credit-card mr-2"></i>
+                                Finalizar Pedido
+                            </button>
+                            <button onclick="clearCart()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 rounded-lg font-medium transition-colors">
+                                <i class="fas fa-trash mr-2"></i>
+                                Limpar Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resto do código permanece igual... -->
+
+    <script>
+        // Advanced Database System
+        class RestaurantDatabase {
+            constructor() {
+                this.initializeDatabase();
+                this.loadFromStorage();
+            }
+
+            initializeDatabase() {
+                this.data = {
+                    products: [
+                        // === HAMBÚRGUERES ===
+                        {
+                            id: 1,
+                            name: "X-Salada",
+                            description: "Hambúrguer clássico com carne, queijo, alface, tomate, cebola e molho especial",
+                            price: 18.90,
+                            category: "hamburguer",
+                            image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&q=80",
+                            popular: true,
+                            available: true,
+                            calories: 520,
+                            prepTime: "12-15 min",
+                            ingredients: ["Carne 150g", "Queijo", "Alface", "Tomate", "Cebola", "Molho Especial"],
+                            allergens: ["Glúten", "Lactose"]
+                        },
+                        {
+                            id: 2,
+                            name: "X-Tudo",
+                            description: "O completo! Carne, queijo, bacon, presunto, ovo, alface, tomate, milho e batata palha",
+                            price: 25.90,
+                            category: "hamburguer",
+                            image: "https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=400&h=400&fit=crop&q=80",
+                            popular: true,
+                            available: true,
+                            calories: 750,
+                            prepTime: "18-22 min",
+                            ingredients: ["Carne 150g", "Queijo", "Bacon", "Presunto", "Ovo", "Alface", "Tomate", "Milho", "Batata Palha"],
+                            allergens: ["Glúten", "Lactose", "Ovo"]
+                        },
+                        {
+                            id: 3,
+                            name: "X-Canhão",
+                            description: "Gigante! Dupla carne, queijo duplo, bacon, salada completa e molho especial",
+                            price: 32.90,
+                            category: "hamburguer",
+                            image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=400&fit=crop&q=80",
+                            popular: true,
+                            available: true,
+                            calories: 890,
+                            prepTime: "20-25 min",
+                            ingredients: ["Carne Dupla 300g", "Queijo Duplo", "Bacon", "Alface", "Tomate", "Cebola", "Molho Especial"],
+                            allergens: ["Glúten", "Lactose"]
+                        },
+                        {
+                            id: 4,
+                            name: "Hambúrguer Simples",
+                            description: "Tradicional hambúrguer com carne suculenta e molho da casa",
+                            price: 14.90,
+                            category: "hamburguer",
+                            image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=400&fit=crop&q=80",
+                            available: true,
+                            calories: 420,
+                            prepTime: "10-12 min",
+                            ingredients: ["Carne 120g", "Molho da Casa"],
+                            allergens: ["Glúten"]
+                        },
+                        {
+                            id: 5,
+                            name: "X-Burguer",
+                            description: "Carne artesanal, queijo cheddar, cebola caramelizada e molho barbecue",
+                            price: 21.90,
+                            category: "hamburguer",
+                            image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=400&fit=crop&q=80",
+                            available: true,
+                            calories: 580,
+                            prepTime: "15-18 min",
+                            ingredients: ["Carne Artesanal 150g", "Queijo Cheddar", "Cebola Caramelizada", "Molho BBQ"],
+                            allergens: ["Glúten", "Lactose"]
+                        },
+                        // === BEBIDAS ===
+                        {
+                            id: 11,
+                            name: "Coca-Cola 350ml",
+                            description: "O refrigerante mais famoso do mundo, gelado e refrescante",
+                            price: 6.90,
+                            category: "bebida",
+                            image: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&h=400&fit=crop&q=80",
+                            popular: true,
+                            available: true,
+                            calories: 140,
+                            prepTime: "Imediato",
+                            ingredients: ["Coca-Cola"],
+                            allergens: []
+                        },
+                        {
+                            id: 12,
+                            name: "Guaraná Antártica 350ml",
+                            description: "O guaraná brasileiro mais tradicional, com sabor autêntico",
+                            price: 6.90,
+                            category: "bebida",
+                            image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&h=400&fit=crop&q=80",
+                            popular: true,
+                            available: true,
+                            calories: 135,
+                            prepTime: "Imediato",
+                            ingredients: ["Guaraná Antártica"],
+                            allergens: []
+                        },
+                        // === ACOMPANHAMENTOS ===
+                        {
+                            id: 23,
+                            name: "Batata Frita Tradicional",
+                            description: "Batatas fritas cortadas em palitos, crocantes e douradas",
+                            price: 11.90,
+                            category: "acompanhamento",
+                            image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=400&fit=crop&q=80",
+                            popular: true,
+                            available: true,
+                            calories: 320,
+                            prepTime: "8-10 min",
+                            ingredients: ["Batata", "Óleo", "Sal"],
+                            allergens: []
+                        },
+                        // === SOBREMESAS ===
+                        {
+                            id: 27,
+                            name: "Sorvete de Chocolate",
+                            description: "Cremoso sorvete de chocolate, irresistível",
+                            price: 8.90,
+                            category: "sobremesa",
+                            image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop&q=80",
+                            available: true,
+                            calories: 220,
+                            prepTime: "Imediato",
+                            ingredients: ["Sorvete de Chocolate"],
+                            allergens: ["Lactose"]
+                        },
+                        // === SALGADOS ===
+                        {
+                            id: 34,
+                            name: "Coxinha de Frango",
+                            description: "Tradicional coxinha brasileira com recheio cremoso de frango",
+                            price: 6.90,
+                            category: "salgado",
+                            image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&q=80",
+                            popular: true,
+                            available: true,
+                            calories: 180,
+                            prepTime: "5-8 min",
+                            ingredients: ["Massa de Batata", "Frango Desfiado", "Temperos"],
+                            allergens: ["Glúten", "Ovo"]
+                        }
+                    ],
+                    deals: [
+                        {
+                            id: 1,
+                            title: "Combo Família",
+                            description: "4 Hambúrgueres + 4 Batatas + 4 Refrigerantes",
+                            originalPrice: 119.60,
+                            dealPrice: 89.90,
+                            discount: 25,
+                            type: "combo",
+                            active: true,
+                            validUntil: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+                            image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=400&fit=crop&q=80"
+                        }
+                    ],
+                    locations: [
+                        {
+                            id: 1,
+                            name: "Centro",
+                            address: "Rua das Flores, 123 - Centro",
+                            phone: "(11) 99999-9999",
+                            hours: "Seg-Dom: 11h - 23h",
+                            delivery: true,
+                            pickup: true,
+                            driveThru: false,
+                            deliveryTime: "15-25 min",
+                            coords: { lat: -23.550520, lng: -46.633308 }
+                        }
+                    ],
+                    cart: [],
+                    orders: [],
+                    customers: [],
+                    orderCounter: 1000,
+                    settings: {
+                        orderType: 'delivery',
+                        selectedLocation: 1,
+                        deliveryFee: 8.00,
+                        freeDeliveryThreshold: 50.00,
+                        tax: 0.0
+                    }
+                };
+                this.saveToStorage();
+            }
+
+            loadFromStorage() {
+                try {
+                    const stored = localStorage.getItem('marcosRestaurantDB');
+                    if (stored) {
+                        const loadedData = JSON.parse(stored);
+                        this.data = { ...this.data, ...loadedData };
+                    }
+                } catch (error) {
+                    console.error('Error loading from storage:', error);
+                }
+            }
+
+            saveToStorage() {
+                try {
+                    localStorage.setItem('marcosRestaurantDB', JSON.stringify(this.data));
+                } catch (error) {
+                    console.error('Error saving to storage:', error);
+                }
+            }
+
+            // Product Methods
+            getProducts(category = null) {
+                let products = this.data.products.filter(p => p.available);
+                if (category && category !== 'all') {
+                    products = products.filter(p => p.category === category);
+                }
+                return products;
+            }
+
+            getProduct(id) {
+                return this.data.products.find(p => p.id === parseInt(id));
+            }
+
+            // Cart Methods
+            addToCart(productId, quantity = 1) {
+                const product = this.getProduct(productId);
+                if (!product || !product.available) return false;
+
+                const existingItem = this.data.cart.find(item => item.productId === productId);
+                if (existingItem) {
+                    existingItem.quantity += quantity;
+                } else {
+                    this.data.cart.push({
+                        productId: productId,
+                        quantity: quantity,
+                        price: product.price,
+                        addedAt: new Date()
+                    });
+                }
+                
+                this.saveToStorage();
+                this.updateCartDisplay();
+                return true;
+            }
+
+            removeFromCart(productId) {
+                this.data.cart = this.data.cart.filter(item => item.productId !== productId);
+                this.saveToStorage();
+                this.updateCartDisplay();
+            }
+
+            updateCartQuantity(productId, quantity) {
+                const item = this.data.cart.find(item => item.productId === productId);
+                if (item) {
+                    if (quantity <= 0) {
+                        this.removeFromCart(productId);
+                    } else {
+                        item.quantity = quantity;
+                        this.saveToStorage();
+                        this.updateCartDisplay();
+                    }
+                }
+            }
+
+            getCartItems() {
+                return this.data.cart.map(item => ({
+                    ...item,
+                    product: this.getProduct(item.productId)
+                }));
+            }
+
+            getCartSubtotal() {
+                return this.data.cart.reduce((total, item) => {
+                    const product = this.getProduct(item.productId);
+                    return total + (product ? product.price * item.quantity : 0);
+                }, 0);
+            }
+
+            getDeliveryFee() {
+                if (this.data.settings.orderType === 'pickup') return 0;
+                const subtotal = this.getCartSubtotal();
+                return subtotal >= this.data.settings.freeDeliveryThreshold ? 0 : this.data.settings.deliveryFee;
+            }
+
+            getCartTotal() {
+                return this.getCartSubtotal() + this.getDeliveryFee();
+            }
+
+            clearCart() {
+                this.data.cart = [];
+                this.saveToStorage();
+                this.updateCartDisplay();
+            }
+
+            updateCartDisplay() {
+                const cartCount = this.data.cart.reduce((total, item) => total + item.quantity, 0);
+                
+                document.getElementById('cartBadge').textContent = cartCount;
+                document.getElementById('floatingCartCount').textContent = cartCount;
+                
+                this.displayCartItems();
+                this.updateCartTotals();
+            }
+
+            displayCartItems() {
+                const cartItemsContainer = document.getElementById('cartItems');
+                const items = this.getCartItems();
+                
+                if (items.length === 0) {
+                    cartItemsContainer.innerHTML = `
+                        <div class="text-center py-8">
+                            <i class="fas fa-shopping-bag text-4xl text-gray-300 mb-4"></i>
+                            <p class="text-gray-500">Seu carrinho está vazio</p>
+                            <button onclick="closeCart(); scrollToSection('menu')" class="mt-4 text-brand-red hover:underline">
+                                Ver Menu
+                            </button>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                cartItemsContainer.innerHTML = items.map(item => `
+                    <div class="flex items-center space-x-4 py-4 border-b">
+                        <img src="${item.product.image}" alt="${item.product.name}" class="w-16 h-16 object-cover rounded">
+                        <div class="flex-1">
+                            <h4 class="font-medium">${item.product.name}</h4>
+                            <p class="text-sm text-gray-600">R$ ${item.product.price.toFixed(2).replace('.', ',')}</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="db.updateCartQuantity(${item.productId}, ${item.quantity - 1})" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                                <i class="fas fa-minus text-xs"></i>
+                            </button>
+                            <span class="w-8 text-center font-medium">${item.quantity}</span>
+                            <button onclick="db.updateCartQuantity(${item.productId}, ${item.quantity + 1})" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                                <i class="fas fa-plus text-xs"></i>
+                            </button>
+                        </div>
+                        <button onclick="db.removeFromCart(${item.productId})" class="text-red-500 hover:text-red-700">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+
+            updateCartTotals() {
+                const subtotal = this.getCartSubtotal();
+                const deliveryFee = this.getDeliveryFee();
+                const total = this.getCartTotal();
+                
+                const cartTotalElement = document.getElementById('cartTotal');
+                if (cartTotalElement) {
+                    cartTotalElement.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+                }
+                
+                const subtotalElement = document.getElementById('subtotalAmount');
+                const deliveryFeeElement = document.getElementById('deliveryFee');
+                const finalTotalElement = document.getElementById('finalTotal');
+                
+                if (subtotalElement) subtotalElement.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+                if (deliveryFeeElement) deliveryFeeElement.textContent = deliveryFee > 0 ? `R$ ${deliveryFee.toFixed(2).replace('.', ',')}` : 'Grátis';
+                if (finalTotalElement) finalTotalElement.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+            }
+
+            // Order Methods
+            createOrder(customerData, paymentData) {
+                const orderId = this.data.orderCounter++;
+                const order = {
+                    id: orderId,
+                    number: `#${orderId.toString().padStart(5, '0')}`,
+                    customer: customerData,
+                    items: [...this.data.cart],
+                    subtotal: this.getCartSubtotal(),
+                    deliveryFee: this.getDeliveryFee(),
+                    total: this.getCartTotal(),
+                    orderType: this.data.settings.orderType,
+                    location: this.getLocation(this.data.settings.selectedLocation),
+                    payment: paymentData,
+                    status: 'confirmed',
+                    estimatedTime: this.calculateEstimatedTime(),
+                    createdAt: new Date(),
+                    updatedAt: new Date()
+                };
+                
+                this.data.orders.push(order);
+                this.clearCart();
+                this.saveToStorage();
+                
+                return order;
+            }
+
+            calculateEstimatedTime() {
+                const baseTime = this.data.settings.orderType === 'delivery' ? 25 : 15;
+                const itemCount = this.data.cart.reduce((total, item) => total + item.quantity, 0);
+                return baseTime + Math.floor(itemCount / 3) * 5;
+            }
+
+            getLocation(id) {
+                return this.data.locations.find(l => l.id === parseInt(id));
+            }
+
+            setOrderType(type) {
+                this.data.settings.orderType = type;
+                this.saveToStorage();
+                this.updateOrderTypeDisplay();
+                this.updateCartTotals();
+            }
+
+            updateOrderTypeDisplay() {
+                const deliveryBtn = document.getElementById('deliveryBtn');
+                const pickupBtn = document.getElementById('pickupBtn');
+                const deliverySection = document.getElementById('deliveryAddressSection');
+                
+                if (this.data.settings.orderType === 'delivery') {
+                    deliveryBtn.className = 'px-4 py-2 bg-brand-red text-white rounded-full text-sm font-medium';
+                    pickupBtn.className = 'px-4 py-2 text-gray-600 rounded-full text-sm font-medium hover:bg-white transition-colors';
+                    if (deliverySection) deliverySection.style.display = 'block';
+                } else {
+                    deliveryBtn.className = 'px-4 py-2 text-gray-600 rounded-full text-sm font-medium hover:bg-white transition-colors';
+                    pickupBtn.className = 'px-4 py-2 bg-brand-red text-white rounded-full text-sm font-medium';
+                    if (deliverySection) deliverySection.style.display = 'none';
+                }
+            }
+        }
+
+        // User Management System
+        class UserManager {
+            constructor() {
+                this.currentUser = JSON.parse(localStorage.getItem('currentUser') || 'null');
+                this.users = JSON.parse(localStorage.getItem('users') || '[]');
+                this.adminCredentials = {
+                    email: 'admin@marcos.com',
+                    password: 'admin123',
+                    name: 'Administrador Sistema',
+                    phone: '(11) 99999-9999'
+                };
+                this.init();
+            }
+
+            init() {
+                this.createDefaultAdmin();
+                this.updateUserDisplay();
+            }
+
+            createDefaultAdmin() {
+                const adminExists = this.users.find(u => u.email === this.adminCredentials.email && u.isAdmin);
+                if (!adminExists) {
+                    const adminUser = {
+                        id: 1,
+                        name: this.adminCredentials.name,
+                        email: this.adminCredentials.email,
+                        phone: this.adminCredentials.phone,
+                        password: this.adminCredentials.password,
+                        isAdmin: true,
+                        createdAt: new Date(),
+                        lastLogin: null
+                    };
+                    
+                    this.users = this.users.filter(u => u.email !== this.adminCredentials.email);
+                    this.users.unshift(adminUser);
+                    localStorage.setItem('users', JSON.stringify(this.users));
+                }
+            }
+
+            register(userData) {
+                if (userData.email === this.adminCredentials.email) {
+                    throw new Error('Este e-mail é reservado para administração');
+                }
+
+                if (this.users.find(u => u.email === userData.email)) {
+                    throw new Error('Usuário já existe com este e-mail');
+                }
+
+                const newUser = {
+                    id: Date.now(),
+                    ...userData,
+                    isAdmin: false,
+                    createdAt: new Date(),
+                    lastLogin: null
+                };
+
+                this.users.push(newUser);
+                localStorage.setItem('users', JSON.stringify(this.users));
+                
+                return newUser;
+            }
+
+            login(email, password) {
+                if (email === this.adminCredentials.email) {
+                    if (password === this.adminCredentials.password) {
+                        const adminUser = this.users.find(u => u.email === this.adminCredentials.email && u.isAdmin);
+                        if (adminUser) {
+                            adminUser.lastLogin = new Date();
+                            this.currentUser = adminUser;
+                            localStorage.setItem('currentUser', JSON.stringify(adminUser));
+                            this.updateUserDisplay();
+                            return adminUser;
+                        }
+                    } else {
+                        throw new Error('Credenciais de administrador incorretas');
+                    }
+                }
+
+                const user = this.users.find(u => u.email === email && u.password === password && !u.isAdmin);
+                if (!user) {
+                    throw new Error('E-mail ou senha incorretos');
+                }
+
+                user.lastLogin = new Date();
+                this.currentUser = user;
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                this.updateUserDisplay();
+                
+                return user;
+            }
+
+            logout() {
+                this.currentUser = null;
+                localStorage.removeItem('currentUser');
+                this.updateUserDisplay();
+            }
+
+            updateUserDisplay() {
+                const userNameDisplay = document.getElementById('userNameDisplay');
+                if (userNameDisplay) {
+                    if (this.currentUser) {
+                        const displayName = this.currentUser.isAdmin ? 
+                            `👑 ${this.currentUser.name.split(' ')[0]}` : 
+                            this.currentUser.name.split(' ')[0];
+                        userNameDisplay.textContent = displayName;
+                    } else {
+                        userNameDisplay.textContent = 'Entrar';
+                    }
+                }
+            }
+
+            isAdmin() {
+                return this.currentUser && this.currentUser.isAdmin === true;
+            }
+
+            requireAdmin() {
+                if (!this.isAdmin()) {
+                    throw new Error('Acesso negado. Apenas administradores podem executar esta ação.');
+                }
+                return true;
+            }
+        }
+
+        // Admin Management System
+        class AdminManager {
+            constructor(database, userManager) {
+                this.db = database;
+                this.userManager = userManager;
+                this.currentTab = 'products';
+            }
+
+            open() {
+                if (!this.userManager.isAdmin()) {
+                    showToast('Acesso negado! Apenas administradores.', 'error');
+                    return;
+                }
+                
+                document.getElementById('adminPanelModal').classList.remove('hidden');
+                this.switchTab('products');
+            }
+
+            close() {
+                document.getElementById('adminPanelModal').classList.add('hidden');
+            }
+
+            switchTab(tab) {
+                this.currentTab = tab;
+                
+                document.querySelectorAll('.admin-tab').forEach(btn => {
+                    btn.classList.remove('active', 'border-b-2', 'border-brand-red', 'text-brand-red');
+                });
+                event?.target.classList.add('active', 'border-b-2', 'border-brand-red', 'text-brand-red');
+                
+                document.querySelectorAll('.admin-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(`admin${tab.charAt(0).toUpperCase() + tab.slice(1)}`).classList.remove('hidden');
+                
+                switch(tab) {
+                    case 'products':
+                        this.loadProducts();
+                        break;
+                    case 'orders':
+                        this.loadOrders();
+                        break;
+                    case 'customers':
+                        this.loadCustomers();
+                        break;
+                    case 'analytics':
+                        this.loadAnalytics();
+                        break;
+                }
+            }
+
+            loadProducts() {
+                const tbody = document.getElementById('adminProductsList');
+                const products = this.db.data.products;
+                
+                tbody.innerHTML = products.map(product => `
+                    <tr class="${!product.available ? 'bg-red-50' : ''}">
+                        <td class="border border-gray-300 px-4 py-2">${product.id}</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <div class="flex items-center">
+                                <img src="${product.image}" alt="${product.name}" class="w-10 h-10 object-cover rounded mr-3">
+                                ${product.name}
+                            </div>
+                        </td>
+                        <td class="border border-gray-300 px-4 py-2">${product.category}</td>
+                        <td class="border border-gray-300 px-4 py-2">R$ ${product.price.toFixed(2).replace('.', ',')}</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <span class="px-2 py-1 rounded-full text-xs ${product.available ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
+                                ${product.available ? 'Disponível' : 'Indisponível'}
+                            </span>
+                        </td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <div class="flex space-x-2">
+                                <button onclick="adminManager.editProduct(${product.id})" class="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button onclick="adminManager.toggleProductStatus(${product.id})" class="bg-yellow-500 hover:bg-yellow-600 text-white px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-toggle-${product.available ? 'on' : 'off'}"></i>
+                                </button>
+                                <button onclick="adminManager.deleteProduct(${product.id})" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded text-xs">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                `).join('');
+            }
+
+            addProduct(productData) {
+                const newProduct = {
+                    id: Math.max(...this.db.data.products.map(p => p.id)) + 1,
+                    name: productData.name,
+                    description: productData.description,
+                    price: parseFloat(productData.price),
+                    category: productData.category,
+                    image: productData.image,
+                    available: productData.available,
+                    popular: productData.popular,
+                    vegetarian: productData.vegetarian,
+                    calories: parseInt(productData.calories),
+                    prepTime: productData.prepTime,
+                    ingredients: [],
+                    allergens: []
+                };
+
+                this.db.data.products.push(newProduct);
+                this.db.saveToStorage();
+                this.loadProducts();
+                showToast('Produto adicionado com sucesso!', 'success');
+            }
+
+            editProduct(id) {
+                const product = this.db.getProduct(id);
+                if (!product) return;
+
+                document.getElementById('productId').value = product.id;
+                document.getElementById('productName').value = product.name;
+                document.getElementById('productDescription').value = product.description;
+                document.getElementById('productPrice').value = product.price;
+                document.getElementById('productCategory').value = product.category;
+                document.getElementById('productImage').value = product.image;
+                document.getElementById('productCalories').value = product.calories;
+                document.getElementById('productPrepTime').value = product.prepTime;
+                document.getElementById('productAvailable').checked = product.available;
+                document.getElementById('productPopular').checked = product.popular || false;
+                document.getElementById('productVegetarian').checked = product.vegetarian || false;
+
+                document.getElementById('productModalTitle').textContent = 'Editar Produto';
+                document.getElementById('productModal').classList.remove('hidden');
+            }
+
+            updateProduct(id, productData) {
+                const productIndex = this.db.data.products.findIndex(p => p.id === parseInt(id));
+                if (productIndex === -1) return;
+
+                this.db.data.products[productIndex] = {
+                    ...this.db.data.products[productIndex],
+                    name: productData.name,
+                    description: productData.description,
+                    price: parseFloat(productData.price),
+                    category: productData.category,
+                    image: productData.image,
+                    available: productData.available,
+                    popular: productData.popular,
+                    vegetarian: productData.vegetarian,
+                    calories: parseInt(productData.calories),
+                    prepTime: productData.prepTime
+                };
+
+                this.db.saveToStorage();
+                this.loadProducts();
+                showToast('Produto atualizado com sucesso!', 'success');
+            }
+
+            toggleProductStatus(id) {
+                const product = this.db.data.products.find(p => p.id === id);
+                if (product) {
+                    product.available = !product.available;
+                    this.db.saveToStorage();
+                    this.loadProducts();
+                    showToast(`Produto ${product.available ? 'ativado' : 'desativado'}!`, 'success');
+                }
+            }
+
+            deleteProduct(id) {
+                const self = this;
+                showConfirmDialog('Tem certeza que deseja excluir este produto?', function() {
+                    self.db.data.products = self.db.data.products.filter(p => p.id !== id);
+                    self.db.saveToStorage();
+                    self.loadProducts();
+                    showToast('Produto excluído com sucesso!', 'success');
+                    loadMenu();
+                });
+            }
+
+            loadOrders() {
+                const container = document.getElementById('adminOrdersList');
+                const orders = this.db.data.orders;
+                
+                container.innerHTML = orders.map(order => `
+                    <div class="bg-white border rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="font-bold">${order.number}</h4>
+                                <p class="text-sm text-gray-600">${order.customer.name} - ${order.customer.phone}</p>
+                                <p class="text-sm text-gray-600">${new Date(order.createdAt).toLocaleString()}</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-lg">R$ ${order.total.toFixed(2).replace('.', ',')}</p>
+                                <span class="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-800">
+                                    ${order.status}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-sm">
+                            <strong>Itens:</strong>
+                            ${order.items.map(item => {
+                                const product = this.db.getProduct(item.productId);
+                                return `${item.quantity}x ${product?.name || 'Produto removido'}`;
+                            }).join(', ')}
+                        </div>
+                    </div>
+                `).join('') || '<p class="text-gray-500 text-center">Nenhum pedido encontrado.</p>';
+            }
+
+            loadCustomers() {
+                const container = document.getElementById('adminCustomersList');
+                const customers = this.userManager.users;
+                
+                container.innerHTML = customers.map(customer => `
+                    <div class="bg-white border rounded-lg p-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-bold">${customer.name}</h4>
+                                <p class="text-sm text-gray-600">${customer.email}</p>
+                                <p class="text-sm text-gray-600">${customer.phone || 'Telefone não informado'}</p>
+                                <p class="text-xs text-gray-500">Cadastrado em: ${new Date(customer.createdAt).toLocaleDateString()}</p>
+                            </div>
+                            <div>
+                                ${customer.isAdmin ? '<span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Admin</span>' : ''}
+                            </div>
+                        </div>
+                    </div>
+                `).join('') || '<p class="text-gray-500 text-center">Nenhum cliente cadastrado.</p>';
+            }
+
+            loadAnalytics() {
+                const orders = this.db.data.orders;
+                const today = new Date().toDateString();
+                
+                const todayOrders = orders.filter(o => new Date(o.createdAt).toDateString() === today);
+                const todaySales = todayOrders.reduce((sum, o) => sum + o.total, 0);
+                const activeCustomers = this.userManager.users.length;
+                
+                setTimeout(() => {
+                    const salesTodayEl = document.getElementById('salesToday');
+                    const ordersTodayEl = document.getElementById('ordersTodayAdmin');
+                    const activeCustomersEl = document.getElementById('activeCustomers');
+                    
+                    if (salesTodayEl) salesTodayEl.textContent = `R$ ${todaySales.toFixed(2).replace('.', ',')}`;
+                    if (ordersTodayEl) ordersTodayEl.textContent = todayOrders.length.toString();
+                    if (activeCustomersEl) activeCustomersEl.textContent = activeCustomers.toString();
+                }, 100);
+            }
+        }
+
+        // Payment System
+        class PaymentSystem {
+            constructor() {
+                this.selectedMethod = null;
+                this.pixData = null;
+            }
+
+            selectMethod(method) {
+                this.selectedMethod = method;
+                this.showPaymentDetails(method);
+            }
+
+            showPaymentDetails(method) {
+                const detailsContainer = document.getElementById('paymentDetails');
+                detailsContainer.classList.remove('hidden');
+                
+                switch(method) {
+                    case 'pix':
+                        this.showPixDetails(detailsContainer);
+                        break;
+                    case 'card':
+                        this.showCardDetails(detailsContainer);
+                        break;
+                    case 'money':
+                        this.showMoneyDetails(detailsContainer);
+                        break;
+                    case 'voucher':
+                        this.showVoucherDetails(detailsContainer);
+                        break;
+                }
+            }
+
+            showPixDetails(container) {
+                container.innerHTML = `
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <p class="text-green-800 font-medium mb-2">✅ PIX Selecionado</p>
+                        <p class="text-sm text-green-700">Você receberá o QR Code após confirmar o pedido.</p>
+                        <div class="mt-2 text-xs text-green-600">
+                            <i class="fas fa-clock mr-1"></i> Pagamento instantâneo
+                        </div>
+                        <div class="mt-3 p-3 bg-white rounded border">
+                            <p class="text-sm font-medium">💳 Chave PIX: marcos@hamburguers.com</p>
+                            <p class="text-xs text-gray-600 mt-1">Ou use o QR Code que será gerado</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            showCardDetails(container) {
+                container.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                            <p class="text-blue-800 font-medium">✅ Cartão Selecionado</p>
+                            <p class="text-xs text-blue-700">Preencha os dados do cartão abaixo</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Número do Cartão</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" class="checkout-input" maxlength="19" onkeyup="formatCardNumber(this)">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Validade</label>
+                                <input type="text" id="cardExpiry" placeholder="MM/AA" class="checkout-input" maxlength="5" onkeyup="formatExpiry(this)">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">CVV</label>
+                                <input type="password" id="cardCvv" placeholder="123" class="checkout-input" maxlength="4">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Nome no Cartão</label>
+                            <input type="text" id="cardName" placeholder="Nome como no cartão" class="checkout-input" style="text-transform: uppercase;">
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <label class="flex items-center">
+                                <input type="radio" name="cardType" value="credit" checked class="mr-2">
+                                <span class="text-sm">💳 Crédito</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="cardType" value="debit" class="mr-2">
+                                <span class="text-sm">💰 Débito</span>
+                            </label>
+                        </div>
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mt-4">
+                            <p class="text-yellow-800 text-sm">
+                                🔒 <strong>Segurança:</strong> Seus dados são criptografados e não armazenados em nossos servidores.
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            showMoneyDetails(container) {
+                container.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                            <p class="text-yellow-800 font-medium mb-2">✅ Dinheiro Selecionado</p>
+                            <p class="text-sm text-yellow-700">Pagamento na entrega. Tenha o valor exato ou informe se precisará de troco.</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Troco para quanto? (opcional)</label>
+                            <input type="number" id="changeAmount" placeholder="Ex: 100.00" class="checkout-input" step="0.01">
+                            <p class="text-xs text-gray-500 mt-1">Deixe em branco se tiver o valor exato</p>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                            <p class="text-blue-800 text-sm">
+                                💡 <strong>Dica:</strong> Tenha o valor próximo ao total para facilitar o troco.
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            showVoucherDetails(container) {
+                container.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-3 mb-4">
+                            <p class="text-purple-800 font-medium">✅ Vale Refeição Selecionado</p>
+                            <p class="text-xs text-purple-700">Informe os dados do seu vale</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Tipo de Vale</label>
+                            <select id="voucherType" class="checkout-input">
+                                <option value="">Selecione o tipo...</option>
+                                <option value="sodexo">🍽️ Sodexo</option>
+                                <option value="alelo">🍽️ Alelo</option>
+                                <option value="ticket">🎫 Ticket</option>
+                                <option value="vr">🍔 VR</option>
+                                <option value="ben">💳 Ben</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Número do Cartão</label>
+                            <input type="text" id="voucherNumber" placeholder="Número do vale refeição" class="checkout-input" maxlength="19">
+                        </div>
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-3">
+                            <p class="text-green-800 text-sm">
+                                ✅ <strong>Aceitos:</strong> Sodexo, Alelo, VR, Ticket e Ben Alimentação.
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            generatePixCode(orderData) {
+                const pixKey = 'marcos@hamburguers.com';
+                const amount = orderData.total.toFixed(2);
+                const description = `Pedido ${orderData.number} - Marcos Hamburguers`;
+                
+                // Simulate PIX code generation
+                const pixCode = `00020126580014BR.GOV.BCB.PIX0136${pixKey}520400005303986540${amount}5925Marcos Hamburguers6009SAO PAULO62070503***63045F3A`;
+                
+                return {
+                    code: pixCode,
+                    qrCodeUrl: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(pixCode)}`,
+                    pixKey: pixKey,
+                    amount: amount,
+                    description: description
+                };
+            }
+
+            processPayment(orderData, paymentData) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        switch(paymentData.method) {
+                            case 'pix':
+                                const pixData = this.generatePixCode(orderData);
+                                resolve({ 
+                                    success: true, 
+                                    method: 'pix', 
+                                    pixData: pixData,
+                                    message: 'QR Code PIX gerado com sucesso!'
+                                });
+                                break;
+                                
+                            case 'card':
+                                // Simulate card validation
+                                const cardNumber = document.getElementById('cardNumber')?.value.replace(/\s/g, '');
+                                const cardExpiry = document.getElementById('cardExpiry')?.value;
+                                const cardCvv = document.getElementById('cardCvv')?.value;
+                                const cardName = document.getElementById('cardName')?.value;
+                                
+                                if (!cardNumber || !cardExpiry || !cardCvv || !cardName) {
+                                    reject(new Error('Preencha todos os dados do cartão'));
+                                    return;
+                                }
+                                
+                                if (cardNumber.length < 13) {
+                                    reject(new Error('Número do cartão inválido'));
+                                    return;
+                                }
+                                
+                                resolve({ 
+                                    success: true, 
+                                    method: 'card',
+                                    cardData: {
+                                        lastFour: cardNumber.slice(-4),
+                                        type: document.querySelector('input[name="cardType"]:checked')?.value || 'credit'
+                                    },
+                                    message: 'Pagamento aprovado com sucesso!'
+                                });
+                                break;
+                                
+                            case 'money':
+                                resolve({ 
+                                    success: true, 
+                                    method: 'money',
+                                    changeAmount: document.getElementById('changeAmount')?.value || null,
+                                    message: 'Pedido confirmado! Pagamento na entrega.'
+                                });
+                                break;
+                                
+                            case 'voucher':
+                                const voucherType = document.getElementById('voucherType')?.value;
+                                const voucherNumber = document.getElementById('voucherNumber')?.value;
+                                
+                                if (!voucherType || !voucherNumber) {
+                                    reject(new Error('Preencha os dados do vale refeição'));
+                                    return;
+                                }
+                                
+                                resolve({ 
+                                    success: true, 
+                                    method: 'voucher',
+                                    voucherData: {
+                                        type: voucherType,
+                                        lastFour: voucherNumber.slice(-4)
+                                    },
+                                    message: 'Vale refeição aprovado!'
+                                });
+                                break;
+                                
+                            default:
+                                reject(new Error('Método de pagamento não selecionado'));
+                        }
+                    }, 1500); // Simulate processing time
+                });
+            }
+        }
+
+        // Initialize Systems
+        const db = new RestaurantDatabase();
+        const userManager = new UserManager();
+        const adminManager = new AdminManager(db, userManager);
+        const paymentSystem = new PaymentSystem();
+
+        // Theme Management
+        class ThemeManager {
+            constructor() {
+                this.currentTheme = localStorage.getItem('theme') || 'auto';
+                this.init();
+            }
+
+            init() {
+                this.applyTheme(this.currentTheme);
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', () => {
+                        this.updateButtons();
+                    });
+                } else {
+                    this.updateButtons();
+                }
+                
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                    if (this.currentTheme === 'auto') {
+                        this.applySystemTheme();
+                    }
+                });
+            }
+
+            setTheme(theme) {
+                this.currentTheme = theme;
+                localStorage.setItem('theme', theme);
+                this.applyTheme(theme);
+                this.updateButtons();
+                
+                const themeNames = {
+                    'light': 'claro',
+                    'dark': 'escuro', 
+                    'auto': 'automático'
+                };
+                
+                showToast(`🎨 Tema ${themeNames[theme]} aplicado!`, 'success');
+            }
+
+            applyTheme(theme) {
+                const html = document.documentElement;
+                const body = document.body;
+                
+                html.classList.remove('dark');
+                body.classList.remove('dark');
+                
+                if (theme === 'dark') {
+                    html.classList.add('dark');
+                    body.classList.add('dark');
+                } else if (theme === 'light') {
+                    // Light theme - no classes needed
+                } else {
+                    this.applySystemTheme();
+                }
+            }
+
+            applySystemTheme() {
+                const html = document.documentElement;
+                const body = document.body;
+                
+                html.classList.remove('dark');
+                body.classList.remove('dark');
+                
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    html.classList.add('dark');
+                    body.classList.add('dark');
+                }
+            }
+
+            updateButtons() {
+                const buttons = {
+                    light: document.getElementById('lightModeBtn'),
+                    dark: document.getElementById('darkModeBtn'),
+                    auto: document.getElementById('autoModeBtn')
+                };
+
+                Object.keys(buttons).forEach(key => {
+                    if (buttons[key]) {
+                        if (key === this.currentTheme) {
+                            buttons[key].className = 'px-3 py-1 rounded-md text-sm bg-brand-primary text-white shadow-md';
+                        } else {
+                            buttons[key].className = 'px-3 py-1 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:text-brand-primary transition-colors';
+                        }
+                    }
+                });
+            }
+        }
+
+        const themeManager = new ThemeManager();
+
+        // UI State Variables
+        let selectedPaymentMethod = null;
+        let currentMenuCategory = 'hamburguer';
+        let productsDisplayed = 6;
+
+        // Utility Functions
+        function showToast(message, type = 'info') {
+            const toastContainer = document.getElementById('toastContainer');
+            if (!toastContainer) {
+                const container = document.createElement('div');
+                container.id = 'toastContainer';
+                container.className = 'fixed top-20 right-4 z-50 space-y-2';
+                document.body.appendChild(container);
+            }
+            
+            const toast = document.createElement('div');
+            
+            const colors = {
+                success: 'bg-green-500 text-white',
+                error: 'bg-red-500 text-white',
+                warning: 'bg-yellow-500 text-black',
+                info: 'bg-blue-500 text-white'
+            };
+            
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-exclamation-circle', 
+                warning: 'fa-exclamation-triangle',
+                info: 'fa-info-circle'
+            };
+            
+            toast.className = `${colors[type]} p-4 rounded-lg shadow-lg slide-up flex items-center space-x-3 max-w-sm`;
+            toast.innerHTML = `
+                <i class="fas ${icons[type]}"></i>
+                <span class="flex-1">${message}</span>
+                <button onclick="this.parentElement.remove()" class="hover:opacity-75">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            
+            document.getElementById('toastContainer').appendChild(toast);
+            
+            setTimeout(() => {
+                if (toast.parentElement) {
+                    toast.remove();
+                }
+            }, 5000);
+        }
+
+        function showConfirmDialog(message, onConfirm) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-sm w-full mx-4">
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">${message}</p>
+                    <div class="flex justify-end space-x-3">
+                        <button class="px-4 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded" onclick="this.closest('.fixed').remove()">Cancelar</button>
+                        <button class="px-4 py-2 bg-red-500 text-white hover:bg-red-600 rounded" onclick="this.closest('.fixed').remove(); (${onConfirm})()">Confirmar</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            return true;
+        }
+
+        // Card formatting functions
+        function formatCardNumber(input) {
+            let value = input.value.replace(/\s/g, '').replace(/[^0-9]/gi, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+            if (formattedValue.length > 19) formattedValue = formattedValue.substr(0, 19);
+            input.value = formattedValue;
+        }
+
+        function formatExpiry(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            input.value = value;
+        }
+
+        // Menu Functions
+        function loadMenu() {
+            const products = db.getProducts(currentMenuCategory);
+            const menuGrid = document.getElementById('menuGrid');
+            const displayProducts = products.slice(0, productsDisplayed);
+            
+            menuGrid.innerHTML = displayProducts.map(product => createMenuCard(product)).join('');
+            
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (products.length <= productsDisplayed) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+            }
+        }
+
+        function createMenuCard(product) {
+            return `
+                <div class="menu-card bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover">
+                        ${product.popular ? '<div class="absolute top-4 left-4 bg-brand-red text-white px-3 py-1 rounded-full text-sm font-bold">POPULAR</div>' : ''}
+                        ${product.vegetarian ? '<div class="absolute top-4 right-4 bg-brand-green text-white px-3 py-1 rounded-full text-sm font-bold">VEGGIE</div>' : ''}
+                        <button onclick="toggleFavorite(${product.id})" class="absolute bottom-4 right-4 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
+                            <i class="fas fa-heart text-gray-400 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">${product.name}</h3>
+                        <p class="text-gray-600 text-sm mb-4">${product.description}</p>
+                        
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-4">
+                            <span><i class="fas fa-fire mr-1"></i> ${product.calories} cal</span>
+                            <span><i class="fas fa-clock mr-1"></i> ${product.prepTime}</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-2xl font-bold text-brand-red">R$ ${product.price.toFixed(2).replace('.', ',')}</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="quantity-controls">
+                                    <button onclick="updateProductQuantity(${product.id}, -1)" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-brand-red">
+                                        <i class="fas fa-minus text-xs"></i>
+                                    </button>
+                                    <span id="qty-${product.id}" class="px-3 font-medium">1</span>
+                                    <button onclick="updateProductQuantity(${product.id}, 1)" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-brand-red">
+                                        <i class="fas fa-plus text-xs"></i>
+                                    </button>
+                                </div>
+                                <button onclick="addProductToCart(${product.id})" class="ripple bg-brand-red hover:bg-red-700 text-white px-4 py-2 rounded-full font-medium transition-colors">
+                                    Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterMenu(category) {
+            currentMenuCategory = category;
+            productsDisplayed = 6;
+            
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            loadMenu();
+        }
+
+        function loadMoreProducts() {
+            productsDisplayed += 6;
+            loadMenu();
+        }
+
+        function updateProductQuantity(productId, change) {
+            const qtyElement = document.getElementById(`qty-${productId}`);
+            let quantity = parseInt(qtyElement.textContent) + change;
+            if (quantity < 1) quantity = 1;
+            qtyElement.textContent = quantity;
+        }
+
+        function addProductToCart(productId) {
+            const qtyElement = document.getElementById(`qty-${productId}`);
+            const quantity = parseInt(qtyElement.textContent);
+            
+            if (db.addToCart(productId, quantity)) {
+                const product = db.getProduct(productId);
+                showToast(`${product.name} adicionado ao carrinho!`, 'success');
+                qtyElement.textContent = '1';
+            }
+        }
+
+        // Cart Functions
+        function openCart() {
+            document.getElementById('cartModal').classList.remove('hidden');
+            db.displayCartItems();
+            db.updateCartTotals();
+        }
+
+        function closeCart() {
+            document.getElementById('cartModal').classList.add('hidden');
+        }
+
+        function clearCart() {
+            showConfirmDialog('Tem certeza que deseja limpar o carrinho?', function() {
+                db.clearCart();
+                showToast('Carrinho limpo!', 'info');
+            });
+        }
+
+        function proceedToCheckout() {
+            if (db.data.cart.length === 0) {
+                showToast('Adicione itens ao carrinho primeiro!', 'warning');
+                return;
+            }
+            
+            closeCart();
+            openCheckout();
+        }
+
+        // Checkout Functions
+        function openCheckout() {
+            document.getElementById('checkoutModal').classList.remove('hidden');
+            db.updateOrderTypeDisplay();
+            updateCheckoutSummary();
+            db.updateCartTotals();
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        function updateCheckoutSummary() {
+            const items = db.getCartItems();
+            const summaryContainer = document.getElementById('checkoutSummary');
+            
+            summaryContainer.innerHTML = items.map(item => `
+                <div class="flex justify-between items-center py-2">
+                    <div>
+                        <span class="font-medium">${item.product.name}</span>
+                        <span class="text-gray-600"> x${item.quantity}</span>
+                    </div>
+                    <span class="font-medium">R$ ${(item.product.price * item.quantity).toFixed(2).replace('.', ',')}</span>
+                </div>
+            `).join('');
+        }
+
+        function selectPaymentMethod(method) {
+            selectedPaymentMethod = method;
+            
+            document.querySelectorAll('.payment-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            document.getElementById('payment-' + method).classList.add('selected');
+            
+            paymentSystem.selectMethod(method);
+            
+            const paymentNames = {
+                'pix': 'PIX',
+                'card': 'Cartão de Crédito/Débito', 
+                'money': 'Dinheiro na Entrega',
+                'voucher': 'Vale Refeição'
+            };
+            
+            showToast(`${paymentNames[method]} selecionado!`, 'success');
+        }
+
+        async function confirmOrder() {
+            // Show loading
+            const confirmBtn = event.target;
+            const originalText = confirmBtn.innerHTML;
+            confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processando...';
+            confirmBtn.disabled = true;
+            
+            try {
+                // Validate form
+                const name = document.getElementById('customerName').value;
+                const phone = document.getElementById('customerPhone').value;
+                
+                if (!name || !phone) {
+                    throw new Error('Por favor, preencha os campos obrigatórios!');
+                }
+                
+                if (!selectedPaymentMethod) {
+                    throw new Error('Selecione uma forma de pagamento!');
+                }
+                
+                // Validate delivery address if needed
+                if (db.data.settings.orderType === 'delivery') {
+                    const street = document.getElementById('street').value;
+                    const number = document.getElementById('number').value;
+                    const neighborhood = document.getElementById('neighborhood').value;
+                    
+                    if (!street || !number || !neighborhood) {
+                        throw new Error('Preencha o endereço de entrega!');
+                    }
+                }
+                
+                // Create customer data
+                const customerData = {
+                    name: name,
+                    phone: phone,
+                    email: document.getElementById('customerEmail').value,
+                    address: db.data.settings.orderType === 'delivery' ? {
+                        street: document.getElementById('street').value,
+                        number: document.getElementById('number').value,
+                        neighborhood: document.getElementById('neighborhood').value,
+                        zipCode: document.getElementById('zipCode').value,
+                        complement: document.getElementById('complement').value
+                    } : null
+                };
+                
+                // Create order first
+                const order = db.createOrder(customerData, { method: selectedPaymentMethod });
+                
+                // Process payment
+                const paymentResult = await paymentSystem.processPayment(order, { method: selectedPaymentMethod });
+                
+                if (paymentResult.success) {
+                    // Close checkout and show confirmation
+                    closeCheckout();
+                    showOrderConfirmation(order, paymentResult);
+                    showToast(paymentResult.message, 'success');
+                } else {
+                    throw new Error('Falha no processamento do pagamento');
+                }
+                
+            } catch (error) {
+                showToast(error.message, 'error');
+            } finally {
+                // Reset button
+                confirmBtn.innerHTML = originalText;
+                confirmBtn.disabled = false;
+            }
+        }
+
+        function showOrderConfirmation(order, paymentResult) {
+            const modal = document.getElementById('orderConfirmationModal');
+            
+            // Update order number and time
+            document.getElementById('orderNumber').textContent = order.number;
+            document.getElementById('estimatedTime').textContent = `${order.estimatedTime} min`;
+            
+            // Show payment-specific content
+            const paymentInfo = document.createElement('div');
+            paymentInfo.className = 'mt-4 p-4 bg-gray-50 rounded-lg';
+            
+            switch(paymentResult.method) {
+                case 'pix':
+                    paymentInfo.innerHTML = `
+                        <h4 class="font-bold mb-2">💳 Pagamento PIX</h4>
+                        <div class="text-center">
+                            <img src="${paymentResult.pixData.qrCodeUrl}" alt="QR Code PIX" class="w-32 h-32 mx-auto mb-3">
+                            <p class="text-sm">Use o QR Code acima ou a chave PIX:</p>
+                            <p class="font-mono text-sm bg-white p-2 rounded mt-2">${paymentResult.pixData.pixKey}</p>
+                            <p class="text-xs text-gray-600 mt-2">Valor: R$ ${paymentResult.pixData.amount}</p>
+                        </div>
+                    `;
+                    break;
+                case 'card':
+                    paymentInfo.innerHTML = `
+                        <h4 class="font-bold mb-2">💳 Pagamento Aprovado</h4>
+                        <p class="text-sm">Cartão final ${paymentResult.cardData.lastFour}</p>
+                        <p class="text-sm">Tipo: ${paymentResult.cardData.type === 'credit' ? 'Crédito' : 'Débito'}</p>
+                        <p class="text-green-600 font-medium">✅ Transação aprovada!</p>
+                    `;
+                    break;
+                case 'money':
+                    paymentInfo.innerHTML = `
+                        <h4 class="font-bold mb-2">💵 Pagamento na Entrega</h4>
+                        <p class="text-sm">Total: R$ ${order.total.toFixed(2).replace('.', ',')}</p>
+                        ${paymentResult.changeAmount ? `<p class="text-sm">Troco para: R$ ${parseFloat(paymentResult.changeAmount).toFixed(2).replace('.', ',')}</p>` : '<p class="text-sm">Valor exato</p>'}
+                    `;
+                    break;
+                case 'voucher':
+                    paymentInfo.innerHTML = `
+                        <h4 class="font-bold mb-2">🎫 Vale Refeição</h4>
+                        <p class="text-sm">Tipo: ${paymentResult.voucherData.type.toUpperCase()}</p>
+                        <p class="text-sm">Cartão final ${paymentResult.voucherData.lastFour}</p>
+                        <p class="text-green-600 font-medium">✅ Vale aprovado!</p>
+                    `;
+                    break;
+            }
+            
+            // Insert payment info
+            const orderConfirmContent = modal.querySelector('.bg-white');
+            const existingPaymentInfo = orderConfirmContent.querySelector('.payment-info');
+            if (existingPaymentInfo) {
+                existingPaymentInfo.remove();
+            }
+            paymentInfo.classList.add('payment-info');
+            orderConfirmContent.insertBefore(paymentInfo, orderConfirmContent.querySelector('.space-y-3'));
+            
+            modal.classList.remove('hidden');
+        }
+
+        function closeOrderConfirmation() {
+            document.getElementById('orderConfirmationModal').classList.add('hidden');
+        }
+
+        // Admin Functions
+        function openAdminPanel() {
+            if (!userManager.currentUser) {
+                openUserAccount();
+                showToast('Faça login como administrador para acessar o painel.', 'warning');
+                return;
+            }
+            
+            if (!userManager.isAdmin()) {
+                showToast('Acesso negado! Apenas administradores podem acessar este painel.', 'error');
+                return;
+            }
+            
+            adminManager.open();
+        }
+
+        function closeAdminPanel() {
+            adminManager.close();
+        }
+
+        function switchAdminTab(tab) {
+            adminManager.switchTab(tab);
+        }
+
+        function openAddProductModal() {
+            document.getElementById('productModalTitle').textContent = 'Adicionar Produto';
+            document.getElementById('productForm').reset();
+            document.getElementById('productId').value = '';
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // User Account Functions
+        function openUserAccount() {
+            const modal = document.getElementById('userAccountModal');
+            modal.classList.remove('hidden');
+            
+            if (userManager.currentUser) {
+                showUserProfile();
+            } else {
+                showLoginForm();
+            }
+        }
+
+        function closeUserAccount() {
+            document.getElementById('userAccountModal').classList.add('hidden');
+        }
+
+        function showLoginForm() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('registerForm').classList.add('hidden');
+            document.getElementById('userProfile').classList.add('hidden');
+        }
+
+        function showUserProfile() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('registerForm').classList.add('hidden');
+            document.getElementById('userProfile').classList.remove('hidden');
+            
+            if (userManager.currentUser) {
+                document.getElementById('profileName').textContent = userManager.currentUser.name;
+                document.getElementById('profileEmail').textContent = userManager.currentUser.email;
+            }
+        }
+
+        function switchToRegister() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('registerForm').classList.remove('hidden');
+        }
+
+        function switchToLogin() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('registerForm').classList.add('hidden');
+        }
+
+        function userLogin(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            
+            if (!email || !password) {
+                showToast('Preencha todos os campos!', 'warning');
+                return;
+            }
+            
+            try {
+                const user = userManager.login(email, password);
+                showToast(`Bem-vindo, ${user.name}!`, 'success');
+                showUserProfile();
+                
+                if (user.isAdmin) {
+                    setTimeout(() => {
+                        showToast('🛡️ Acesso administrativo ativado!', 'info');
+                    }, 1000);
+                }
+            } catch (error) {
+                showToast(error.message, 'error');
+            }
+        }
+
+        function userRegister(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('registerName').value.trim();
+            const email = document.getElementById('registerEmail').value.trim();
+            const phone = document.getElementById('registerPhone').value.trim();
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (!name || !email || !phone || !password) {
+                showToast('Preencha todos os campos!', 'warning');
+                return;
+            }
+            
+            if (password.length < 6) {
+                showToast('Senha deve ter pelo menos 6 caracteres!', 'warning');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                showToast('Senhas não coincidem!', 'error');
+                return;
+            }
+            
+            const userData = {
+                name: name,
+                email: email,
+                phone: phone,
+                password: password
+            };
+            
+            try {
+                userManager.register(userData);
+                userManager.login(userData.email, userData.password);
+                showToast('Conta criada e login realizado com sucesso!', 'success');
+                showUserProfile();
+            } catch (error) {
+                showToast(error.message, 'error');
+            }
+        }
+
+        function userLogout() {
+            userManager.logout();
+            showToast('Logout realizado com sucesso!', 'success');
+            closeUserAccount();
+        }
+
+        // Navigation and Utility Functions
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('translate-x-full');
+        }
+
+        function setTheme(theme) {
+            themeManager.setTheme(theme);
+        }
+
+        function setOrderType(type) {
+            db.setOrderType(type);
+            showToast(type === 'delivery' ? 'Modo delivery selecionado' : 'Modo retirada selecionado', 'info');
+        }
+
+        function selectLocation() {
+            showToast('Seletor de localização em desenvolvimento...', 'info');
+        }
+
+        function quickOrder() {
+            scrollToSection('menu');
+            showToast('Escolha seus hambúrgueres favoritos!', 'info');
+        }
+
+        function toggleFavorite(productId) {
+            showToast('Produto adicionado aos favoritos!', 'success');
+        }
+
+        function applyPromoOffer() {
+            showToast('Oferta especial aplicada! Adicione 2 hambúrgueres ao carrinho.', 'success');
+            scrollToSection('menu');
+        }
+
+        // Advanced Cookie Management System
+        class CookieManager {
+            constructor() {
+                this.cookieSettings = {
+                    necessary: true, // Always true, cannot be disabled
+                    functional: false,
+                    analytics: false,
+                    marketing: false
+                };
+                this.loadSettings();
+            }
+
+            loadSettings() {
+                const saved = localStorage.getItem('cookieSettings');
+                if (saved) {
+                    this.cookieSettings = { ...this.cookieSettings, ...JSON.parse(saved) };
+                }
+            }
+
+            saveSettings() {
+                localStorage.setItem('cookieSettings', JSON.stringify(this.cookieSettings));
+                localStorage.setItem('cookiesConfigured', 'true');
+            }
+
+            updateSetting(type, enabled) {
+                if (type !== 'necessary') { // Necessary cookies cannot be disabled
+                    this.cookieSettings[type] = enabled;
+                    this.saveSettings();
+                    this.applyCookieSettings();
+                }
+            }
+
+            applyCookieSettings() {
+                // Apply functional cookies
+                if (this.cookieSettings.functional) {
+                    // Enable theme persistence, location memory, etc.
+                    console.log('✅ Functional cookies enabled');
+                } else {
+                    // Disable non-essential functional features
+                    console.log('❌ Functional cookies disabled');
+                }
+
+                // Apply analytics cookies
+                if (this.cookieSettings.analytics) {
+                    // Enable analytics tracking
+                    console.log('✅ Analytics cookies enabled');
+                    this.enableAnalytics();
+                } else {
+                    // Disable analytics
+                    console.log('❌ Analytics cookies disabled');
+                }
+
+                // Apply marketing cookies
+                if (this.cookieSettings.marketing) {
+                    // Enable marketing tracking
+                    console.log('✅ Marketing cookies enabled');
+                } else {
+                    // Disable marketing tracking
+                    console.log('❌ Marketing cookies disabled');
+                }
+            }
+
+            enableAnalytics() {
+                // Simulate analytics enablement
+                if (typeof gtag !== 'undefined') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted'
+                    });
+                }
+            }
+
+            acceptAll() {
+                this.cookieSettings = {
+                    necessary: true,
+                    functional: true,
+                    analytics: true,
+                    marketing: true
+                };
+                this.saveSettings();
+                this.applyCookieSettings();
+                this.hideBanner();
+                showToast('Todos os cookies foram aceitos! 🍪', 'success');
+            }
+
+            rejectAll() {
+                this.cookieSettings = {
+                    necessary: true,
+                    functional: false,
+                    analytics: false,
+                    marketing: false
+                };
+                this.saveSettings();
+                this.applyCookieSettings();
+                this.hideBanner();
+                showToast('Apenas cookies essenciais foram mantidos.', 'info');
+            }
+
+            hideBanner() {
+                document.getElementById('cookieBanner').style.transform = 'translateY(100%)';
+            }
+
+            showPreferences() {
+                document.getElementById('cookiePreferencesModal').classList.remove('hidden');
+                this.updatePreferencesUI();
+            }
+
+            updatePreferencesUI() {
+                document.getElementById('functionalCookies').checked = this.cookieSettings.functional;
+                document.getElementById('analyticsCookies').checked = this.cookieSettings.analytics;
+                document.getElementById('marketingCookies').checked = this.cookieSettings.marketing;
+            }
+
+            savePreferences() {
+                this.cookieSettings.functional = document.getElementById('functionalCookies').checked;
+                this.cookieSettings.analytics = document.getElementById('analyticsCookies').checked;
+                this.cookieSettings.marketing = document.getElementById('marketingCookies').checked;
+                
+                this.saveSettings();
+                this.applyCookieSettings();
+                this.hideBanner();
+                document.getElementById('cookiePreferencesModal').classList.add('hidden');
+                
+                showToast('Preferências de cookies salvas! ⚙️', 'success');
+            }
+        }
+
+        const cookieManager = new CookieManager();
+
+        // Cookie Functions
+        function setupCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            
+            setTimeout(() => {
+                const configured = localStorage.getItem('cookiesConfigured');
+                if (!configured) {
+                    banner.style.transform = 'translateY(0)';
+                }
+            }, 2000);
+        }
+
+        function acceptAllCookies() {
+            cookieManager.acceptAll();
+        }
+
+        function rejectAllCookies() {
+            cookieManager.rejectAll();
+        }
+
+        function openCookiePreferences() {
+            cookieManager.showPreferences();
+        }
+
+        function closeCookiePreferences() {
+            document.getElementById('cookiePreferencesModal').classList.add('hidden');
+        }
+
+        function saveCookiePreferences() {
+            cookieManager.savePreferences();
+        }
+
+        // Chatbot System
+        class ChatbotManager {
+            constructor() {
+                this.isOpen = false;
+                this.messageHistory = [];
+                this.autoResponses = {
+                    // Greetings
+                    'oi': 'Olá! 👋 Como posso ajudar você hoje?',
+                    'olá': 'Oi! 😊 Em que posso ajudar?',
+                    'ola': 'Olá! Como posso te ajudar?',
+                    'bom dia': 'Bom dia! ☀️ Como posso ajudar?',
+                    'boa tarde': 'Boa tarde! 🌞 Em que posso ajudar?',
+                    'boa noite': 'Boa noite! 🌙 Como posso te ajudar?',
+                    
+                    // Orders
+                    'quero fazer um pedido': 'Perfeito! 🍔 Você pode escolher seus hambúrgueres no nosso menu. Posso te ajudar a encontrar algo específico?',
+                    'fazer pedido': 'Ótimo! Vou te ajudar com seu pedido. O que você gostaria hoje?',
+                    'cardápio': 'Nosso cardápio está disponível na seção Menu do site! Temos hambúrgueres, acompanhamentos, bebidas e sobremesas. 🍟🥤',
+                    'menu': 'Confira nosso menu completo na página! Temos opções deliciosas para todos os gostos! 😋',
+                    
+                    // Hours and Location
+                    'horário': 'Funcionamos de Segunda a Domingo das 11h às 23h! 🕐',
+                    'qual o horário de funcionamento?': 'Estamos abertos todos os dias das 11h às 23h! 📅',
+                    'horário de funcionamento': 'Nosso horário é de Segunda a Domingo, das 11h às 23h!',
+                    'onde vocês ficam?': 'Nossa unidade fica na Rua das Flores, 123 - Centro. Fazemos delivery para toda a região! 📍',
+                    'endereço': 'Estamos localizados na Rua das Flores, 123 - Centro, São Paulo. 🏠',
+                    'localização': 'Rua das Flores, 123 - Centro - São Paulo, SP',
+                    
+                    // Delivery
+                    'delivery': 'Sim! Fazemos delivery em toda a região em 15-25 minutos! Taxa de R$ 8,00 (grátis acima de R$ 50). 🚚',
+                    'entrega': 'Entregamos em 15-25 minutos! Taxa de R$ 8,00 ou grátis em pedidos acima de R$ 50! 🏍️',
+                    'quanto tempo demora': 'O delivery demora em média 15-25 minutos, dependendo da localização! ⏱️',
+                    'tempo de entrega': 'Entre 15 a 25 minutos para delivery! Bem rapidinho! 🚀',
+                    
+                    // Payment
+                    'formas de pagamento': 'Aceitamos PIX, cartão de débito/crédito, dinheiro e vale refeição! 💳',
+                    'pagamento': 'Você pode pagar com PIX, cartão, dinheiro ou vale refeição! 💰',
+                    'aceita pix': 'Sim! Aceitamos PIX! É instantâneo e prático! 📱',
+                    'cartão': 'Aceitamos cartão de débito e crédito! Visa, Mastercard e outros! 💳',
+                    
+                    // Prices
+                    'preço': 'Nossos hambúrgueres variam de R$ 14,90 a R$ 32,90. Confira o menu completo! 💰',
+                    'quanto custa': 'Os preços variam conforme o produto. Veja nosso menu para valores específicos! 📋',
+                    'valor': 'Temos opções a partir de R$ 14,90! Confira nosso cardápio! 💸',
+                    
+                    // Popular items
+                    'mais vendido': 'Nosso X-Tudo é o mais pedido! Tem tudo que você imagina! 🍔',
+                    'recomendação': 'Recomendo o X-Canhão! É gigante e delicioso! Ou o clássico X-Salada! 🌟',
+                    'sugestão': 'Que tal experimentar nosso X-Tudo? É completo e muito saboroso! 😋',
+                    
+                    // Contact
+                    'telefone': 'Nosso telefone é (11) 99999-9999 📞',
+                    'contato': 'Você pode nos chamar no (11) 99999-9999 ou pelo WhatsApp! 📱',
+                    'whatsapp': 'Nosso WhatsApp é (11) 99999-9999! 💬',
+                    
+                    // Thanks
+                    'obrigado': 'Por nada! Estou aqui para ajudar! 😊',
+                    'obrigada': 'De nada! Qualquer dúvida, é só chamar! 🤗',
+                    'valeu': 'Sempre às ordens! 👍',
+                    
+                    // Goodbye
+                    'tchau': 'Tchau! Volte sempre! 👋',
+                    'até logo': 'Até logo! Esperamos você em breve! 😊',
+                    'adeus': 'Até mais! Tenha um ótimo dia! 🌟'
+                };
+                
+                this.contextualResponses = [
+                    {
+                        keywords: ['promoção', 'oferta', 'desconto'],
+                        response: 'Temos uma super oferta! 2 Hambúrgueres por R$ 35,90! Válida até domingo! 🔥'
+                    },
+                    {
+                        keywords: ['vegetariano', 'vegano', 'salada'],
+                        response: 'Temos opções vegetarianas! Nossos hambúrgueres podem ser preparados sem carne. 🥗'
+                    },
+                    {
+                        keywords: ['alérgico', 'alergia', 'intolerante'],
+                        response: 'Informamos todos os alérgenos dos nossos produtos. Consulte nossa equipe para escolhas seguras! ⚠️'
+                    },
+                    {
+                        keywords: ['app', 'aplicativo', 'baixar'],
+                        response: 'Você pode fazer pedidos direto pelo nosso site! É prático e seguro! 📱'
+                    }
+                ];
+            }
+
+            toggle() {
+                const chatWindow = document.getElementById('chatbotWindow');
+                const chatIcon = document.getElementById('chatbotIcon');
+                
+                if (this.isOpen) {
+                    chatWindow.classList.add('hidden');
+                    chatIcon.className = 'fas fa-comments text-xl';
+                    this.isOpen = false;
+                } else {
+                    chatWindow.classList.remove('hidden');
+                    chatIcon.className = 'fas fa-times text-xl';
+                    this.isOpen = true;
+                    this.hideNotification();
+                }
+            }
+
+            close() {
+                document.getElementById('chatbotWindow').classList.add('hidden');
+                document.getElementById('chatbotIcon').className = 'fas fa-comments text-xl';
+                this.isOpen = false;
+            }
+
+            showNotification() {
+                document.getElementById('chatbotNotification').classList.remove('hidden');
+            }
+
+            hideNotification() {
+                document.getElementById('chatbotNotification').classList.add('hidden');
+            }
+
+            sendMessage(message) {
+                const chatMessages = document.getElementById('chatMessages');
+                
+                // Add user message
+                this.addMessage('user', message);
+                
+                // Show typing indicator
+                this.showTypingIndicator();
+                
+                // Generate response after delay
+                setTimeout(() => {
+                    this.hideTypingIndicator();
+                    const response = this.generateResponse(message);
+                    this.addMessage('bot', response);
+                    
+                    // Auto scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000 + Math.random() * 1000); // Random delay 1-2 seconds
+            }
+
+            addMessage(sender, message) {
+                const chatMessages = document.getElementById('chatMessages');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `chat-message ${sender}-message mb-4`;
+                
+                if (sender === 'user') {
+                    messageDiv.innerHTML = `
+                        <div class="flex items-start space-x-2 justify-end">
+                            <div class="bg-brand-primary text-white p-3 rounded-lg shadow-sm max-w-xs">
+                                <p class="text-sm">${message}</p>
+                            </div>
+                            <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
+                                <span class="text-gray-600 text-xs font-bold">V</span>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    messageDiv.innerHTML = `
+                        <div class="flex items-start space-x-2">
+                            <div class="w-6 h-6 bg-brand-primary rounded-full flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">M</span>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg shadow-sm max-w-xs">
+                                <p class="text-sm">${message}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                chatMessages.appendChild(messageDiv);
+                
+                // Save to history
+                this.messageHistory.push({ sender, message, timestamp: new Date() });
+                
+                // Auto scroll
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            showTypingIndicator() {
+                const chatMessages = document.getElementById('chatMessages');
+                const typingDiv = document.createElement('div');
+                typingDiv.id = 'typingIndicator';
+                typingDiv.className = 'chat-message bot-message mb-4';
+                typingDiv.innerHTML = `
+                    <div class="flex items-start space-x-2">
+                        <div class="w-6 h-6 bg-brand-primary rounded-full flex items-center justify-center">
+                            <span class="text-white text-xs font-bold">M</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm">
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                                <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                                <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                chatMessages.appendChild(typingDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            hideTypingIndicator() {
+                const typingIndicator = document.getElementById('typingIndicator');
+                if (typingIndicator) {
+                    typingIndicator.remove();
+                }
+            }
+
+            generateResponse(message) {
+                const lowerMessage = message.toLowerCase().trim();
+                
+                // Check direct matches first
+                if (this.autoResponses[lowerMessage]) {
+                    return this.autoResponses[lowerMessage];
+                }
+                
+                // Check contextual responses
+                for (const context of this.contextualResponses) {
+                    if (context.keywords.some(keyword => lowerMessage.includes(keyword))) {
+                        return context.response;
+                    }
+                }
+                
+                // Check partial matches
+                for (const [key, response] of Object.entries(this.autoResponses)) {
+                    if (lowerMessage.includes(key) || key.includes(lowerMessage)) {
+                        return response;
+                    }
+                }
+                
+                // Default responses
+                const defaultResponses = [
+                    'Interessante! Posso te ajudar com informações sobre nosso cardápio, horários ou delivery! 🍔',
+                    'Não entendi muito bem, mas estou aqui para ajudar! Que tal me perguntar sobre nossos hambúrgueres? 😊',
+                    'Hmm, posso te ajudar melhor se você me perguntar sobre pedidos, horários ou nosso menu! 🤔',
+                    'Opa! Não captei direito. Posso te ajudar com informações sobre a Marcos Hamburguers! 👍',
+                    'Vou te ajudar da melhor forma! Me conte o que você precisa saber sobre nossos produtos! 🌟'
+                ];
+                
+                return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+            }
+
+            sendQuickMessage(message) {
+                // Clear input and send the quick message
+                document.getElementById('chatInput').value = '';
+                this.sendMessage(message);
+            }
+
+            handleKeyPress(event) {
+                if (event.key === 'Enter') {
+                    this.sendCurrentMessage();
+                }
+            }
+
+            sendCurrentMessage() {
+                const input = document.getElementById('chatInput');
+                const message = input.value.trim();
+                
+                if (message) {
+                    this.sendMessage(message);
+                    input.value = '';
+                }
+            }
+
+            // Simulate smart responses based on time
+            getGreetingByTime() {
+                const hour = new Date().getHours();
+                if (hour < 12) {
+                    return 'Bom dia! ☀️ Como posso ajudar você hoje?';
+                } else if (hour < 18) {
+                    return 'Boa tarde! 🌞 Em que posso ajudar?';
+                } else {
+                    return 'Boa noite! 🌙 Como posso te ajudar?';
+                }
+            }
+
+            // Simulate proactive messages
+            showProactiveMessage() {
+                if (!this.isOpen && this.messageHistory.length === 0) {
+                    setTimeout(() => {
+                        this.showNotification();
+                        
+                        setTimeout(() => {
+                            if (!this.isOpen) {
+                                this.addMessage('bot', 'Oi! 👋 Precisa de ajuda com algum pedido? Estou aqui para ajudar! 🍔');
+                            }
+                        }, 3000);
+                    }, 10000); // Show after 10 seconds
+                }
+            }
+        }
+
+        const chatbot = new ChatbotManager();
+
+        // Chatbot Functions
+        function toggleChatbot() {
+            chatbot.toggle();
+        }
+
+        function closeChatbot() {
+            chatbot.close();
+        }
+
+        function sendQuickMessage(message) {
+            chatbot.sendQuickMessage(message);
+        }
+
+        function sendChatMessage() {
+            chatbot.sendCurrentMessage();
+        }
+
+        function handleChatKeyPress(event) {
+            chatbot.handleKeyPress(event);
+        }
+
+        // Social Media Functions
+        function openSocialMedia(platform) {
+            const urls = {
+                whatsapp: 'https://wa.me/5511999999999?text=Olá! Gostaria de fazer um pedido na Marcos Hamburguers! 🍔',
+                telegram: 'https://t.me/marcoshamburguers',
+                facebook: 'https://facebook.com/marcoshamburguers',
+                instagram: 'https://instagram.com/marcoshamburguers',
+                twitter: 'https://twitter.com/marcoshamburguers',
+                youtube: 'https://youtube.com/marcoshamburguers'
+            };
+            
+            if (urls[platform]) {
+                window.open(urls[platform], '_blank');
+                
+                if (platform === 'whatsapp') {
+                    showToast('Redirecionando para WhatsApp... 📱', 'success');
+                } else if (platform === 'telegram') {
+                    showToast('Redirecionando para Telegram... 💬', 'success');
+                }
+            }
+        }
+
+        // Placeholder functions for footer links
+        function openCareersPage() { showToast('Página de carreiras em desenvolvimento...', 'info'); }
+        function openSupport() { showToast('Suporte em desenvolvimento...', 'info'); }
+        function openFAQ() { showToast('FAQ em desenvolvimento...', 'info'); }
+        function trackOrder() { showToast('Rastreamento em desenvolvimento...', 'info'); }
+        function openPrivacyPolicy() { showToast('Política de privacidade em desenvolvimento...', 'info'); }
+        function openTerms() { showToast('Termos de uso em desenvolvimento...', 'info'); }
+        function openOrderHistory() { showToast('Histórico em desenvolvimento...', 'info'); }
+        function openFavorites() { showToast('Favoritos em desenvolvimento...', 'info'); }
+        function openAddressBook() { showToast('Endereços em desenvolvimento...', 'info'); }
+
+        // Initialize Application
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMenu();
+            loadDeals();
+            loadLocations();
+            setupHeader();
+            setupCookieBanner();
+            db.updateCartDisplay();
+            db.updateOrderTypeDisplay();
+            
+            // Product form handler
+            const productForm = document.getElementById('productForm');
+            if (productForm) {
+                productForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    if (!userManager.requireAdmin()) return;
+                    
+                    const productData = {
+                        name: document.getElementById('productName').value,
+                        description: document.getElementById('productDescription').value,
+                        price: document.getElementById('productPrice').value,
+                        category: document.getElementById('productCategory').value,
+                        image: document.getElementById('productImage').value,
+                        calories: document.getElementById('productCalories').value,
+                        prepTime: document.getElementById('productPrepTime').value,
+                        available: document.getElementById('productAvailable').checked,
+                        popular: document.getElementById('productPopular').checked,
+                        vegetarian: document.getElementById('productVegetarian').checked
+                    };
+
+                    const productId = document.getElementById('productId').value;
+                    
+                    if (productId) {
+                        adminManager.updateProduct(productId, productData);
+                    } else {
+                        adminManager.addProduct(productData);
+                    }
+                    
+                    closeProductModal();
+                    loadMenu();
+                });
+            }
+        });
+
+        function loadDeals() {
+            const deals = db.data.deals;
+            const dealsContainer = document.getElementById('dealsContainer');
+            
+            dealsContainer.innerHTML = deals.map(deal => `
+                <div class="bg-gradient-to-r from-brand-red to-red-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="bg-brand-yellow text-black px-3 py-1 rounded-full text-sm font-bold">
+                            OFERTA DA SEMANA
+                        </span>
+                        <h3 class="text-3xl font-black mt-4 mb-2">${deal.title}</h3>
+                        <p class="text-xl mb-6">${deal.description}</p>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <span class="text-4xl font-black">R$ ${deal.dealPrice.toFixed(2).replace('.', ',')}</span>
+                            <span class="text-xl line-through opacity-75">R$ ${deal.originalPrice.toFixed(2).replace('.', ',')}</span>
+                            <span class="bg-brand-yellow text-black px-3 py-1 rounded-full font-bold">
+                                -${deal.discount}%
+                            </span>
+                        </div>
+                        <button onclick="applyPromoOffer()" class="ripple bg-white text-brand-red px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
+                            Pedir Agora
+                        </button>
+                    </div>
+                    <div class="absolute top-0 right-0 opacity-20">
+                        <i class="fas fa-hamburger text-8xl"></i>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function loadLocations() {
+            const locations = db.data.locations;
+            const locationsContainer = document.getElementById('locationsContainer');
+            
+            locationsContainer.innerHTML = locations.map(location => `
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">${location.name}</h3>
+                            <p class="text-gray-600">${location.driveThru ? 'Drive-Thru Disponível' : 'Unidade Tradicional'}</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-map-marker-alt text-brand-red w-5 mr-3"></i>
+                            ${location.address}
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-clock text-brand-red w-5 mr-3"></i>
+                            ${location.hours}
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-phone text-brand-red w-5 mr-3"></i>
+                            <a href="tel:${location.phone}">${location.phone}</a>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-motorcycle text-brand-red w-5 mr-3"></i>
+                            Delivery: ${location.deliveryTime}
+                        </p>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button onclick="selectLocationAndOrder(${location.id})" class="flex-1 bg-brand-red hover:bg-red-700 text-white py-3 rounded-lg font-medium transition-colors">
+                            Escolher Local
+                        </button>
+                        <button onclick="openMap(${location.coords.lat}, ${location.coords.lng})" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-3 rounded-lg transition-colors">
+                            <i class="fas fa-map"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function selectLocationAndOrder(locationId) {
+            db.setSelectedLocation(locationId);
+            showToast('Localização selecionada!', 'success');
+            scrollToSection('menu');
+        }
+
+        function openMap(lat, lng) {
+            const url = `https://www.google.com/maps?q=${lat},${lng}`;
+            window.open(url, '_blank');
+        }
+
+        function setupHeader() {
+            const header = document.getElementById('mainHeader');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('sticky-header');
+                } else {
+                    header.classList.remove('sticky-header');
+                }
+            });
+        }
+
+        console.log('🍔 Marcos Hamburguers - Sistema COMPLETO Carregado!');
+        console.log('✅ Banco de dados funcional');
+        console.log('✅ Sistema de pagamento PIX/Cartão/Dinheiro/Vale');
+        console.log('✅ Painel administrativo completo');
+        console.log('✅ Todos os botões funcionais');
+        console.log('👤 LOGIN ADMIN: admin@marcos.com / admin123');
+    </script>
+
+    <!-- Additional Modals -->
+    
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="fixed inset-0 modal z-50 hidden">
+        <div class="min-h-screen px-4 py-8">
+            <div class="bg-white rounded-lg shadow-xl max-w-4xl mx-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold">Finalizar Pedido</h2>
+                        <button onclick="closeCheckout()" class="text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <!-- Customer Information -->
+                        <div>
+                            <h3 class="text-lg font-bold mb-4">Informações Pessoais</h3>
+                            <form id="checkoutForm" class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">Nome Completo</label>
+                                    <input type="text" id="customerName" class="checkout-input" required="">
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-1">Telefone</label>
+                                        <input type="tel" id="customerPhone" class="checkout-input" required="">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-1">E-mail</label>
+                                        <input type="email" id="customerEmail" class="checkout-input">
+                                    </div>
+                                </div>
+
+                                <!-- Delivery Address (shown only for delivery) -->
+                                <div id="deliveryAddressSection">
+                                    <h4 class="font-bold mt-6 mb-4">Endereço de Entrega</h4>
+                                    <div class="space-y-4">
+                                        <div class="grid grid-cols-3 gap-4">
+                                            <div class="col-span-2">
+                                                <label class="block text-sm font-medium mb-1">Rua</label>
+                                                <input type="text" id="street" class="checkout-input">
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium mb-1">Número</label>
+                                                <input type="text" id="number" class="checkout-input">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium mb-1">Bairro</label>
+                                                <input type="text" id="neighborhood" class="checkout-input">
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium mb-1">CEP</label>
+                                                <input type="text" id="zipCode" class="checkout-input" placeholder="00000-000">
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium mb-1">Complemento (opcional)</label>
+                                            <input type="text" id="complement" class="checkout-input" placeholder="Apartamento, bloco, referência...">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Payment Method -->
+                                <div class="mt-6">
+                                    <h4 class="font-bold mb-4">Forma de Pagamento</h4>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div id="payment-pix" class="payment-card border-2 rounded-lg p-4 cursor-pointer" onclick="selectPaymentMethod('pix')">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-qrcode text-green-600 text-2xl mr-3"></i>
+                                                <div>
+                                                    <p class="font-medium">PIX</p>
+                                                    <p class="text-sm text-gray-600">Instantâneo</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="payment-card" class="payment-card border-2 rounded-lg p-4 cursor-pointer" onclick="selectPaymentMethod('card')">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-credit-card text-blue-600 text-2xl mr-3"></i>
+                                                <div>
+                                                    <p class="font-medium">Cartão</p>
+                                                    <p class="text-sm text-gray-600">Débito/Crédito</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="payment-money" class="payment-card border-2 rounded-lg p-4 cursor-pointer" onclick="selectPaymentMethod('money')">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-money-bill text-green-600 text-2xl mr-3"></i>
+                                                <div>
+                                                    <p class="font-medium">Dinheiro</p>
+                                                    <p class="text-sm text-gray-600">Na entrega</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="payment-voucher" class="payment-card border-2 rounded-lg p-4 cursor-pointer" onclick="selectPaymentMethod('voucher')">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-ticket-alt text-purple-600 text-2xl mr-3"></i>
+                                                <div>
+                                                    <p class="font-medium">Vale Refeição</p>
+                                                    <p class="text-sm text-gray-600">Sodexo, Alelo</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment Details -->
+                                    <div id="paymentDetails" class="mt-4 hidden">
+                                        <!-- Payment-specific fields will be inserted here -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div>
+                            <h3 class="text-lg font-bold mb-4">Resumo do Pedido</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div id="checkoutSummary">
+                                    <!-- Order summary will be inserted here -->
+                                </div>
+                                
+                                <div class="border-t pt-4 mt-4">
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between">
+                                            <span>Subtotal:</span>
+                                            <span id="subtotalAmount">R$ 0,00</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Taxa de entrega:</span>
+                                            <span id="deliveryFee">R$ 8,00</span>
+                                        </div>
+                                        <div class="flex justify-between font-bold text-lg border-t pt-2">
+                                            <span>Total:</span>
+                                            <span id="finalTotal" class="text-brand-red">R$ 0,00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <button onclick="confirmOrder()" class="w-full bg-brand-red hover:bg-red-700 text-white py-3 rounded-lg font-bold transition-colors">
+                                        <i class="fas fa-check mr-2"></i>
+                                        Confirmar Pedido
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="orderConfirmationModal" class="fixed inset-0 modal z-50 hidden">
+        <div class="min-h-screen px-4 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6 text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-green-600 text-2xl"></i>
+                </div>
+                
+                <h2 class="text-2xl font-bold mb-2">Pedido Confirmado!</h2>
+                <p class="text-gray-600 mb-4">Seu pedido foi recebido e está sendo preparado.</p>
+                
+                <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                    <p class="text-sm text-gray-600">Número do Pedido</p>
+                    <p class="text-xl font-bold" id="orderNumber">#12345</p>
+                    <p class="text-sm text-gray-600 mt-2">Tempo estimado: <span id="estimatedTime">25-30 min</span></p>
+                </div>
+                
+                <div class="space-y-3">
+                    <button onclick="closeOrderConfirmation()" class="w-full bg-brand-red hover:bg-red-700 text-white py-3 rounded-lg font-medium transition-colors">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div id="adminPanelModal" class="fixed inset-0 modal z-50 hidden">
+        <div class="min-h-screen px-4 py-8">
+            <div class="bg-white rounded-lg shadow-xl max-w-6xl mx-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-purple-700">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            Painel Administrativo
+                        </h2>
+                        <button onclick="closeAdminPanel()" class="text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Admin Tabs -->
+                    <div class="flex border-b mb-6 overflow-x-auto">
+                        <button onclick="switchAdminTab('products')" class="admin-tab active px-6 py-3 font-medium whitespace-nowrap">
+                            <i class="fas fa-burger mr-2"></i>Produtos
+                        </button>
+                        <button onclick="switchAdminTab('orders')" class="admin-tab px-6 py-3 font-medium whitespace-nowrap">
+                            <i class="fas fa-shopping-cart mr-2"></i>Pedidos
+                        </button>
+                        <button onclick="switchAdminTab('customers')" class="admin-tab px-6 py-3 font-medium whitespace-nowrap">
+                            <i class="fas fa-users mr-2"></i>Clientes
+                        </button>
+                        <button onclick="switchAdminTab('analytics')" class="admin-tab px-6 py-3 font-medium whitespace-nowrap">
+                            <i class="fas fa-chart-bar mr-2"></i>Analytics
+                        </button>
+                    </div>
+
+                    <!-- Products Tab -->
+                    <div id="adminProducts" class="admin-content">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xl font-bold">Gerenciar Produtos</h3>
+                            <button onclick="openAddProductModal()" class="bg-brand-red hover:bg-red-700 text-white px-4 py-2 rounded-lg">
+                                <i class="fas fa-plus mr-2"></i>Adicionar Produto
+                            </button>
+                        </div>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full border-collapse border border-gray-300">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="border border-gray-300 px-4 py-2 text-left">ID</th>
+                                        <th class="border border-gray-300 px-4 py-2 text-left">Nome</th>
+                                        <th class="border border-gray-300 px-4 py-2 text-left">Categoria</th>
+                                        <th class="border border-gray-300 px-4 py-2 text-left">Preço</th>
+                                        <th class="border border-gray-300 px-4 py-2 text-left">Status</th>
+                                        <th class="border border-gray-300 px-4 py-2 text-left">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="adminProductsList">
+                                    <!-- Products will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Orders Tab -->
+                    <div id="adminOrders" class="admin-content hidden">
+                        <h3 class="text-xl font-bold mb-6">Gerenciar Pedidos</h3>
+                        <div id="adminOrdersList" class="space-y-4">
+                            <!-- Orders will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Customers Tab -->
+                    <div id="adminCustomers" class="admin-content hidden">
+                        <h3 class="text-xl font-bold mb-6">Gerenciar Clientes</h3>
+                        <div id="adminCustomersList" class="space-y-4">
+                            <!-- Customers will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Analytics Tab -->
+                    <div id="adminAnalytics" class="admin-content hidden">
+                        <h3 class="text-xl font-bold mb-6">Analytics e Relatórios</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-blue-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-blue-700 mb-2">Vendas Hoje</h4>
+                                <p class="text-3xl font-bold text-blue-900" id="salesToday">R$ 1,245.80</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-green-700 mb-2">Pedidos Hoje</h4>
+                                <p class="text-3xl font-bold text-green-900" id="ordersTodayAdmin">42</p>
+                            </div>
+                            <div class="bg-purple-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-purple-700 mb-2">Clientes Ativos</h4>
+                                <p class="text-3xl font-bold text-purple-900" id="activeCustomers">156</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Product Modal -->
+    <div id="productModal" class="fixed inset-0 modal z-50 hidden">
+        <div class="min-h-screen px-4 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold" id="productModalTitle">Adicionar Produto</h2>
+                    <button onclick="closeProductModal()" class="text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <form id="productForm" class="space-y-4">
+                    <input type="hidden" id="productId">
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Nome do Produto</label>
+                        <input type="text" id="productName" class="w-full p-3 border rounded-lg" required="">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Descrição</label>
+                        <textarea id="productDescription" rows="3" class="w-full p-3 border rounded-lg" required=""></textarea>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Preço (R$)</label>
+                            <input type="number" id="productPrice" step="0.01" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Categoria</label>
+                            <select id="productCategory" class="w-full p-3 border rounded-lg" required="">
+                                <option value="">Selecione...</option>
+                                <option value="hamburguer">Hambúrguer</option>
+                                <option value="salgado">Salgado</option>
+                                <option value="acompanhamento">Acompanhamento</option>
+                                <option value="bebida">Bebida</option>
+                                <option value="sobremesa">Sobremesa</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-1">URL da Imagem</label>
+                        <input type="url" id="productImage" class="w-full p-3 border rounded-lg" required="">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Calorias</label>
+                            <input type="number" id="productCalories" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Tempo de Preparo</label>
+                            <input type="text" id="productPrepTime" placeholder="Ex: 15-20 min" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <label class="flex items-center">
+                            <input type="checkbox" id="productAvailable" class="mr-2" checked="">
+                            Disponível
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" id="productPopular" class="mr-2">
+                            Popular
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" id="productVegetarian" class="mr-2">
+                            Vegetariano
+                        </label>
+                    </div>
+                    
+                    <div class="flex space-x-3 pt-4">
+                        <button type="submit" class="flex-1 bg-brand-red hover:bg-red-700 text-white py-3 rounded-lg font-medium">
+                            <i class="fas fa-save mr-2"></i>Salvar
+                        </button>
+                        <button type="button" onclick="closeProductModal()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-lg font-medium">
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Preferences Modal -->
+    <div id="cookiePreferencesModal" class="fixed inset-0 modal z-50 hidden">
+        <div class="min-h-screen px-4 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold">🍪 Preferências de Cookies</h2>
+                    <button onclick="closeCookiePreferences()" class="text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="border rounded-lg p-4 bg-gray-50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-medium">Cookies Necessários</h4>
+                                <p class="text-sm text-gray-600">Essenciais para o funcionamento do site</p>
+                            </div>
+                            <div class="bg-green-500 w-12 h-6 rounded-full flex items-center px-1">
+                                <div class="bg-white w-4 h-4 rounded-full translate-x-6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border rounded-lg p-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-medium">Cookies Funcionais</h4>
+                                <p class="text-sm text-gray-600">Melhoram a experiência do usuário</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="functionalCookies" class="sr-only">
+                                <div class="w-12 h-6 bg-gray-200 rounded-full peer-checked:bg-blue-500 transition-colors">
+                                    <div class="w-4 h-4 bg-white rounded-full transition-transform translate-x-1 peer-checked:translate-x-7"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="border rounded-lg p-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-medium">Cookies Analíticos</h4>
+                                <p class="text-sm text-gray-600">Nos ajudam a melhorar o site</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="analyticsCookies" class="sr-only">
+                                <div class="w-12 h-6 bg-gray-200 rounded-full peer-checked:bg-blue-500 transition-colors">
+                                    <div class="w-4 h-4 bg-white rounded-full transition-transform translate-x-1 peer-checked:translate-x-7"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="border rounded-lg p-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-medium">Cookies de Marketing</h4>
+                                <p class="text-sm text-gray-600">Para anúncios personalizados</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="marketingCookies" class="sr-only">
+                                <div class="w-12 h-6 bg-gray-200 rounded-full peer-checked:bg-blue-500 transition-colors">
+                                    <div class="w-4 h-4 bg-white rounded-full transition-transform translate-x-1 peer-checked:translate-x-7"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-3 mt-6">
+                    <button onclick="rejectAllCookies()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-lg font-medium">
+                        Recusar Tudo
+                    </button>
+                    <button onclick="saveCookiePreferences()" class="flex-1 bg-brand-red hover:bg-red-700 text-white py-3 rounded-lg font-medium">
+                        Salvar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Account Modal -->
+    <div id="userAccountModal" class="fixed inset-0 modal z-50 hidden">
+        <div class="min-h-screen px-4 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold">Minha Conta</h2>
+                    <button onclick="closeUserAccount()" class="text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="loginForm">
+                    <form onsubmit="userLogin(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">E-mail ou Telefone</label>
+                            <input type="text" id="loginEmail" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Senha</label>
+                            <input type="password" id="loginPassword" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-brand-red hover:bg-red-700 text-white py-3 rounded-lg font-medium">
+                            <i class="fas fa-sign-in-alt mr-2"></i>Entrar
+                        </button>
+                    </form>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-gray-600">Não tem conta?</p>
+                        <button onclick="switchToRegister()" class="text-brand-red hover:underline font-medium">
+                            Criar conta
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="hidden">
+                    <form onsubmit="userRegister(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Nome Completo</label>
+                            <input type="text" id="registerName" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-1">E-mail</label>
+                            <input type="email" id="registerEmail" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Telefone</label>
+                            <input type="tel" id="registerPhone" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Senha</label>
+                            <input type="password" id="registerPassword" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Confirmar Senha</label>
+                            <input type="password" id="confirmPassword" class="w-full p-3 border rounded-lg" required="">
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-brand-red hover:bg-red-700 text-white py-3 rounded-lg font-medium">
+                            <i class="fas fa-user-plus mr-2"></i>Criar Conta
+                        </button>
+                    </form>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-gray-600">Já tem conta?</p>
+                        <button onclick="switchToLogin()" class="text-brand-red hover:underline font-medium">
+                            Fazer Login
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User Profile (when logged in) -->
+                <div id="userProfile" class="hidden">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg" id="profileName">Nome do Usuário</h3>
+                        <p class="text-gray-600" id="profileEmail">email@exemplo.com</p>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <button onclick="openOrderHistory()" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-3 rounded-lg font-medium text-left px-4">
+                            <i class="fas fa-history mr-3"></i>Histórico de Pedidos
+                        </button>
+                        <button onclick="openFavorites()" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-3 rounded-lg font-medium text-left px-4">
+                            <i class="fas fa-heart mr-3"></i>Favoritos
+                        </button>
+                        <button onclick="openAddressBook()" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-3 rounded-lg font-medium text-left px-4">
+                            <i class="fas fa-map-marker-alt mr-3"></i>Endereços Salvos
+                        </button>
+                        <button onclick="userLogout()" class="w-full bg-red-100 hover:bg-red-200 text-red-700 py-3 rounded-lg font-medium text-left px-4">
+                            <i class="fas fa-sign-out-alt mr-3"></i>Sair
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body></html>
